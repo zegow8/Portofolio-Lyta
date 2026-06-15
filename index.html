@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Earlyta | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Earlyta Dwi Anggraeni</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#design" class="nav-link">Design</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- HOME -->
+        <section id="home" class="section">
+            <div class="content">
+                <h1 class="greeting">Heeyy, saya Earlyta.</h1>
+                <p class="tagline">Full Stack Developer & UI/UX Enthusiast.</p>
+                <p class="subtagline">n here's my portofolio!</p>
+                <div class="scroll-hint">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="section">
+            <div class="content">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-wrapper">
+                    <div class="about-image">
+                        <img src="lytacv.png" alt="Earlyta" id="profile-img" onerror="this.src='https://via.placeholder.com/300x300?text=Earlyta'">
+                    </div>
+                    <div class="about-text">
+                        <p>Saya adalah siswa rekayasa perangkat lunak yang saat ini duduk di bangku kelas 11. Berfokus pada pengembangan website dan aplikasi. Memiliki ketertarikan pada frontend maupun backend development, saya senang membangun sistem yang tidak hanya berjalan dengan baik, tetapi juga memiliki tampilan yang nyaman digunakan.</p>
+                        <p>Selama belajar dan mengembangkan proyek pribadi, saya telah mengerjakan berbagai aplikasi seperti sistem kasir, aplikasi manajemen data, website informatif, dan aplikasi produktivitas. Saat ini saya terus memperdalam kemampuan di bidang web development, database, dan pengembangan aplikasi sambil membangun portofolio yang mencerminkan kemampuan serta kreativitas saya.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="section">
+            <div class="content">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-container">
+                    <div class="skills-category">
+                        <h3 class="category-title">🌐 Web Development</h3>
+                        <div class="skills-list">
+                            <span class="skill-item">Next.js</span>
+                            <span class="skill-item">Laravel</span>
+                            <span class="skill-item">PHP Native</span>
+                            <span class="skill-item">Node.js</span>
+                            <span class="skill-item">HTML</span>
+                            <span class="skill-item">CSS</span>
+                            <span class="skill-item">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="skills-category">
+                        <h3 class="category-title">📱 Mobile Development</h3>
+                        <div class="skills-list">
+                            <span class="skill-item">React Native</span>
+                            <span class="skill-item">Android Studio - Java</span>
+                            <span class="skill-item">GDvelop</span>
+                            <span class="skill-item">Unity</span>
+                        </div>
+                    </div>
+                    <div class="skills-category">
+                        <h3 class="category-title">🗄️ Database</h3>
+                        <div class="skills-list">
+                            <span class="skill-item">PostgreSQL</span>
+                            <span class="skill-item">Firebase</span>
+                        </div>
+                    </div>
+                    <div class="skills-category">
+                        <h3 class="category-title">🛠️ Tools & Environment</h3>
+                        <div class="skills-list">
+                            <span class="skill-item">Laragon</span>
+                            <span class="skill-item">Git & GitHub</span>
+                        </div>
+                    </div>
+                    <div class="skills-category">
+                        <h3 class="category-title">🎨 Design</h3>
+                        <div class="skills-list">
+                            <span class="skill-item">Figma</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="section">
+            <div class="content">
+                <h2 class="section-title">10 Best Projects</h2>
+                <div class="projects-grid" id="projects-grid"></div>
+            </div>
+        </section>
+
+        <!-- DESIGN -->
+        <section id="design" class="section">
+            <div class="content">
+                <h2 class="section-title">8 Best Design Gallery</h2>
+                <div class="design-grid" id="design-grid"></div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="section">
+            <div class="content">
+                <h2 class="section-title">Contact</h2>
+                <p class="contact-text">Feel free to reach me</p>
+                <div class="contact-icons">
+                    <a href="https://wa.me/6281547184307" target="_blank" class="contact-icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://instagram.com/eddlyaa__" target="_blank" class="contact-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="mailto:earlytadwi7@gmail.com" class="contact-icon"><i class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/zegow8" target="_blank" class="contact-icon"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>last update on 15 June 2026</p>
+    </footer>
+
+    <!-- Lightbox untuk zoom in gambar -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
