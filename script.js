@@ -171,6 +171,50 @@ const designs = [
     }
 ];
 
+// Data Games (5 Games)
+const games = [
+    {
+        title: "MEOWMORY GAME",
+        desc: "Game memory match 4×4 dengan gambar kucing. Pemain harus mencocokkan 8 pasang kartu dalam waktu 60 detik. Setiap kartu menampilkan foto kucing yang unik, dan pemain ditantang untuk mengingat posisi setiap gambar. Fitur: timer 60 detik, hitungan langkah, high score tersimpan di localStorage, dan kontrol tap/klik yang responsif di desktop maupun HP.",
+        tech: "HTML, CSS, JavaScript",
+        github: "https://github.com/zegow8/meowmorygame.git",
+        demo: "https://zegow8.github.io/meowmorygame/",
+        img: "assets/meow1.png"
+    },
+    {
+        title: "MAZE GAME",
+        desc: "Game labirin interaktif dengan generate maze procedural (40×40) pake algoritma recursive backtracking. Pemain punya 3 nyawa, kalo nabrak tembok reset ke start. Multi-platform: arrow keys buat desktop, tombol sentuh buat HP.",
+        tech: "HTML, CSS, JavaScript",
+        github: "https://github.com/zegow8/maze-game.git",
+        demo: "https://zegow8.github.io/maze-game/",
+        img: "assets/maze1.png"
+    },
+    {
+        title: "OHIO BLOCK",
+        desc: "Game puzzle blok dengan grid 8×8. Pemain drag & drop blok warna-warni ke dalam grid untuk mengisi baris atau kolom penuh. Setiap kali baris/kolom penuh, blok akan hilang dan pemain mendapat poin. Fitur: score & high score (localStorage), level naik setiap 100 poin, hint untuk menunjukkan tempat yang bisa diisi, new shapes untuk mengganti blok yang tersedia, dan kontrol drag & drop yang responsif di desktop (mouse) maupun HP (touch).",
+        tech: "HTML, CSS, JavaScript",
+        github: "https://github.com/zegow8/ohioblock.git",
+        demo: "https://zegow8.github.io/ohioblock/",
+        img: "assets/ohio1.png"
+    },
+    {
+        title: "FLAPPY BIRD",
+        desc: "Game arcade klasik dengan kontrol sederhana. Pemain mengontrol burung yang terbang melewati rintangan pipa dengan cara mengetuk/klik untuk melompat. Fitur: 7 tipe rintangan (normal, narrow, wide, moving, double, zigzag, gapChange) yang semakin sulit seiring bertambahnya score, gravity & jump physics, high score tersimpan di localStorage, dan kontrol multi-platform: klik/tap di desktop, swipe up di HP.",
+        tech: "HTML, CSS, JavaScript",
+        github: "https://github.com/zegow8/flappy-bird-hand-gesture.git",
+        demo: "https://zegow8.github.io/flappy-bird-hand-gesture/",
+        img: "assets/flappy1.png"
+    },
+    {
+        title: "PLATFORMER FINAL",
+        desc: "Aplikasi ini merupakan game platformer 2D yang dikembangkan menggunakan GDevelop 5. Pemain harus menjelajahi level, mengalahkan musuh, mengumpulkan koin, dan mencapai portal tujuan sebelum waktu habis. Game dilengkapi dengan sistem 5 nyawa, timer permainan, checkpoint untuk menyimpan progres, serta dua jenis skor yang memengaruhi kemenangan pemain.\n\nScore A diperoleh dengan mengalahkan monster Fly, sedangkan Score B diperoleh dengan mengalahkan monster Fire dan mengumpulkan koin. Setiap koin memberikan 10 poin, monster Fly memberikan 20 poin, dan monster Fire memberikan 25 poin.\n\nPemain dinyatakan menang apabila berhasil mencapai portal dengan Score A lebih dari 200 poin dan Score B lebih dari 175 poin sebelum waktu permainan berakhir. Sebaliknya, pemain akan kalah apabila gagal mencapai target skor atau tidak berhasil mencapai portal sebelum batas waktu yang tersedia.\n\nGame juga dilengkapi dengan halaman petunjuk permainan, scene menu utama, sistem checkpoint, serta tampilan kemenangan dan kekalahan yang muncul berdasarkan hasil permainan pemain.",
+        tech: "GDevelop 5",
+        github: null,
+        demo: "https://zegow8.itch.io/platformer-final",
+        img: "assets/plat1.png"
+    }
+];
+
 // Render Projects dengan Slideshow + Read More
 function renderProjects() {
     const container = document.getElementById('projects-grid');
@@ -269,11 +313,10 @@ function renderProjects() {
     });
 }
 
-// ========== INI YG DIUBAH ==========
 // Toggle deskripsi (expand/collapse)
 function toggleDesc(index) {
     const descs = document.querySelectorAll('.project-desc');
-    const btns = document.querySelectorAll('.read-more-btn');
+    const btns = document.querySelectorAll('.project-card .read-more-btn');
     const isDesktop = window.innerWidth > 768;
     
     if (isDesktop) {
@@ -302,7 +345,6 @@ function toggleDesc(index) {
         }
     }
 }
-// ========== SAMPAI SINI ==========
 
 // Render Design Gallery
 function renderDesigns() {
@@ -321,6 +363,69 @@ function renderDesigns() {
             </div>
         </div>
     `).join('');
+}
+
+// Render Games
+function renderGames() {
+    const container = document.getElementById('games-grid');
+    if (!container) return;
+
+    container.innerHTML = games.map((game, index) => {
+        const shortDesc = game.desc.length > 120 ? game.desc.substring(0, 120) + '...' : game.desc;
+        const isLong = game.desc.length > 120;
+
+        // Cek apakah github ada isinya atau null
+        const githubLink = game.github ? `<a href="${game.github}" target="_blank"><i class="fab fa-github"></i></a>` : '';
+
+        return `
+            <div class="game-card">
+                <h3 class="game-title">${game.title}</h3>
+                <img src="${game.img}" alt="${game.title}" class="game-img" onclick="openLightbox(this.src)">
+                <div class="game-desc" id="game-desc-${index}">
+                    <span class="short-desc">${shortDesc}</span>
+                    ${isLong ? `<span class="full-desc">${game.desc}</span>` : ''}
+                </div>
+                ${isLong ? `<button class="read-more-btn" onclick="toggleGameDesc(${index})">Selengkapnya →</button>` : ''}
+                <p class="game-tech"><i class="fas fa-code"></i> ${game.tech}</p>
+                <div class="game-links">
+                    ${githubLink}
+                    <a href="${game.demo}" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+// Toggle deskripsi game (expand/collapse)
+function toggleGameDesc(index) {
+    const descs = document.querySelectorAll('.game-desc');
+    const btns = document.querySelectorAll('.game-card .read-more-btn');
+    const isDesktop = window.innerWidth > 768;
+    
+    if (isDesktop) {
+        // Desktop (2 kolom): buka berpasangan
+        const pairStart = Math.floor(index / 2) * 2;
+        const pairEnd = pairStart + 1;
+        
+        [pairStart, pairEnd].forEach(i => {
+            if (descs[i]) {
+                descs[i].classList.toggle('expanded');
+                const btn = descs[i].parentElement.querySelector('.read-more-btn');
+                if (btn) {
+                    btn.textContent = descs[i].classList.contains('expanded') ? 'Tutup ↑' : 'Selengkapnya →';
+                }
+            }
+        });
+    } else {
+        // Mobile (1 kolom): buka cuma 1
+        if (descs[index]) {
+            descs[index].classList.toggle('expanded');
+            const btn = descs[index].parentElement.querySelector('.read-more-btn');
+            if (btn) {
+                btn.textContent = descs[index].classList.contains('expanded') ? 'Tutup ↑' : 'Selengkapnya →';
+            }
+        }
+    }
 }
 
 // Lightbox functions
@@ -414,6 +519,7 @@ function setupScrollHint() {
 document.addEventListener('DOMContentLoaded', () => {
     renderProjects();
     renderDesigns();
+    renderGames();
     setupNavbar();
     setupSmoothScroll();
     setupScrollHint();
