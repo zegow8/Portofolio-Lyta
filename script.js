@@ -13,7 +13,8 @@ Pengguna juga dapat melihat riwayat penyewaan, memantau status pesanan, mengakse
         tech: "Next.js, Prisma, PostgreSQL",
         github: "https://github.com/zegow8/Raiental.git",
         demo: null,
-        images: ["assets/raiental1.png", "assets/raiental2.png"]
+        images: ["assets/raiental1.png", "assets/raiental2.png"],
+        filter: "nextjs"
     },
     {
         title: "Olshop Prog Lyta",
@@ -25,7 +26,8 @@ Pada sisi pengguna, tersedia halaman katalog produk dengan fitur pencarian, peng
         tech: "Next.js, PostgreSQL, Prisma",
         github: "https://github.com/zegow8/olshop-prog-lyta.git",
         demo: null,
-        images: ["assets/olshop1.png", "assets/olshop2.png"]
+        images: ["assets/olshop1.png", "assets/olshop2.png"],
+        filter: "nextjs"
     },
     {
         title: "Gamestorelyta",
@@ -39,7 +41,8 @@ Sistem juga menyediakan fitur My Library yang berisi seluruh aplikasi yang telah
         tech: "Laravel, MySQL",
         github: "https://github.com/zegow8/gamestorelyta.git",
         demo: null,
-        images: ["assets/gstore1.png", "assets/gstore2.png"]
+        images: ["assets/gstore1.png", "assets/gstore2.png"],
+        filter: "laravel"
     },
     {
         title: "Rainnawr Pet Shop",
@@ -53,7 +56,8 @@ Fitur keranjang belanja memungkinkan pengguna mengatur jumlah pembelian dan meli
         tech: "Laravel, MySQL, Bootstrap",
         github: "https://github.com/zegow8/rainnawr-pet-shop.git",
         demo: null,
-        images: ["assets/pshop1.png", "assets/pshop2.png"]
+        images: ["assets/pshop1.png", "assets/pshop2.png"],
+        filter: "laravel"
     },
     {
         title: "Washify",
@@ -67,7 +71,8 @@ Untuk proses pemesanan, pelanggan dapat membuat order laundry dengan memilih jen
         tech: "PHP Native, MySQL, CSS Native",
         github: "https://github.com/zegow8/washify.git",
         demo: "http://washify.free.nf",
-        images: ["assets/wash1.png", "assets/wash2.png"]
+        images: ["assets/wash1.png", "assets/wash2.png"],
+        filter: "phpnative"
     },
     {
         title: "Kasir Cafe",
@@ -81,7 +86,8 @@ Selain itu, seluruh transaksi yang telah dilakukan akan tersimpan pada halaman r
         tech: "PHP Native, MySQL, Bootstrap",
         github: "https://github.com/zegow8/kasir-cafe.git",
         demo: null,
-        images: ["assets/kascafe1.png"]
+        images: ["assets/kascafe1.png"],
+        filter: "phpnative"
     },
     {
         title: "Lassavore Restaurant",
@@ -89,7 +95,8 @@ Selain itu, seluruh transaksi yang telah dilakukan akan tersimpan pada halaman r
         tech: "HTML, CSS, JavaScript",
         github: "https://github.com/zegow8/lassavore-restaurant.git",
         demo: "https://zegow8.github.io/lassavore-restaurant",
-        images: null
+        images: null,
+        filter: "htmlcssjs"
     },
 
     // ====== 3 PROYEK ANDROID (TURUN KE BAWAH) ======
@@ -99,7 +106,8 @@ Selain itu, seluruh transaksi yang telah dilakukan akan tersimpan pada halaman r
         tech: "Android Studio, Java, SQLite",
         github: "https://github.com/zegow8/Librify.git",
         demo: null,
-        images: null
+        images: null,
+        filter: "android"
     },
     {
         title: "DeepFocus",
@@ -107,7 +115,8 @@ Selain itu, seluruh transaksi yang telah dilakukan akan tersimpan pada halaman r
         tech: "Android Studio, Java",
         github: "https://github.com/zegow8/DeepFocus.git",
         demo: null,
-        images: null
+        images: null,
+        filter: "android"
     },
     {
         title: "Taskify",
@@ -115,7 +124,8 @@ Selain itu, seluruh transaksi yang telah dilakukan akan tersimpan pada halaman r
         tech: "Android Studio, Java",
         github: "https://github.com/zegow8/Taskify.git",
         demo: null,
-        images: null
+        images: null,
+        filter: "android"
     }
 ];
 
@@ -125,49 +135,57 @@ const designs = [
         title: "Raiental",
         desc: "UI Web Penyewaan Game & Aplikasi Android",
         imgFile: "assets/design-raiental.png",
-        figmaUrl: "https://www.figma.com/design/xSAGoQEJEHgmIatoJ72F0c/RAIENTAL-NEXT-JS?t=pMNI5Cw47BnaeKfm-1"
+        figmaUrl: "https://www.figma.com/design/xSAGoQEJEHgmIatoJ72F0c/RAIENTAL-NEXT-JS?t=pMNI5Cw47BnaeKfm-1",
+        filter: "desktop"
     },
     {
         title: "Librify",
         desc: "UI Aplikasi Peminjaman Buku Android",
         imgFile: "assets/design-librify.png",
-        figmaUrl: "https://www.figma.com/design/zzv5EiF66McfZbsjwgL2Mo/LIBRIFY-ANDROID-STUDIO?t=pMNI5Cw47BnaeKfm-1"
+        figmaUrl: "https://www.figma.com/design/zzv5EiF66McfZbsjwgL2Mo/LIBRIFY-ANDROID-STUDIO?t=pMNI5Cw47BnaeKfm-1",
+        filter: "mobile"
     },
     {
         title: "DeepFocus",
         desc: "UI Manajemen Timer Belajar Android",
         imgFile: "assets/design-deepfocus.png",
-        figmaUrl: "https://www.figma.com/design/V1veFYxIJ1Ny0Dm3bvxyoT/DeepFocus?t=pMNI5Cw47BnaeKfm-1"
+        figmaUrl: "https://www.figma.com/design/V1veFYxIJ1Ny0Dm3bvxyoT/DeepFocus?t=pMNI5Cw47BnaeKfm-1",
+        filter: "mobile"
     },
     {
         title: "AppStore",
         desc: "UI App Store (Personal Project)",
         imgFile: "assets/design-appstore.png",
-        figmaUrl: "https://www.figma.com/design/VezA7NIrmUStKZ3Sp6GpFD/AppStoreLyta?node-id=0-1&p=f&t=pMNI5Cw47BnaeKfm-0"
+        figmaUrl: "https://www.figma.com/design/VezA7NIrmUStKZ3Sp6GpFD/AppStoreLyta?node-id=0-1&p=f&t=pMNI5Cw47BnaeKfm-0",
+        filter: "mobile"
     },
     {
         title: "Taskify",
         desc: "UI Aplikasi Manajemen Tugas Android",
         imgFile: "assets/design-taskify.png",
-        figmaUrl: "https://www.figma.com/design/RBkNQMvNPpYpAOUczeAhID/Taskify-Android-Studio?t=pMNI5Cw47BnaeKfm-0"
+        figmaUrl: "https://www.figma.com/design/RBkNQMvNPpYpAOUczeAhID/Taskify-Android-Studio?t=pMNI5Cw47BnaeKfm-0",
+        filter: "mobile"
     },
     {
         title: "Lassavore Hotel",
         desc: "UI Website Hotel & Restoran",
         imgFile: "assets/lassavore hotel.png",
-        figmaUrl: "https://www.figma.com/design/sEYITVlZ0Al1JTiGAvN9R4/skibidi-hotel?node-id=1-5&t=pMNI5Cw47BnaeKfm-1"
+        figmaUrl: "https://www.figma.com/design/sEYITVlZ0Al1JTiGAvN9R4/skibidi-hotel?node-id=1-5&t=pMNI5Cw47BnaeKfm-1",
+        filter: "desktop"
     },
     {
         title: "Koperasi 21",
         desc: "UI Sistem Koperasi Sekolah",
         imgFile: "assets/design-koperasi 21.png",
-        figmaUrl: "https://www.figma.com/design/S3N9182xrcLbV7cc0odFDa/KOPERASI-11-EARLYTA?node-id=0-1&t=pMNI5Cw47BnaeKfm-1"
+        figmaUrl: "https://www.figma.com/design/S3N9182xrcLbV7cc0odFDa/KOPERASI-11-EARLYTA?node-id=0-1&t=pMNI5Cw47BnaeKfm-1",
+        filter: "desktop"
     },
     {
         title: "IT Club Komik",
         desc: "UI Komik Digital (IT Club Project)",
         imgFile: "assets/itkomik.png",
-        figmaUrl: "https://www.figma.com/design/EraJYu2GyywCHkzz1PRlKJ/figmay-it-komik?node-id=1-2&t=pMNI5Cw47BnaeKfm-1"
+        figmaUrl: "https://www.figma.com/design/EraJYu2GyywCHkzz1PRlKJ/figmay-it-komik?node-id=1-2&t=pMNI5Cw47BnaeKfm-1",
+        filter: "mobile"
     }
 ];
 
@@ -179,7 +197,8 @@ const games = [
         tech: "HTML, CSS, JavaScript",
         github: "https://github.com/zegow8/meowmorygame.git",
         demo: "https://zegow8.github.io/meowmorygame/",
-        img: "assets/meow1.png"
+        img: "assets/meow1.png",
+        filter: "htmlcssjs"
     },
     {
         title: "MAZE GAME",
@@ -187,7 +206,8 @@ const games = [
         tech: "HTML, CSS, JavaScript",
         github: "https://github.com/zegow8/maze-game.git",
         demo: "https://zegow8.github.io/maze-game/",
-        img: "assets/maze1.png"
+        img: "assets/maze1.png",
+        filter: "htmlcssjs"
     },
     {
         title: "OHIO BLOCK",
@@ -195,7 +215,8 @@ const games = [
         tech: "HTML, CSS, JavaScript",
         github: "https://github.com/zegow8/ohioblock.git",
         demo: "https://zegow8.github.io/ohioblock/",
-        img: "assets/ohio1.png"
+        img: "assets/ohio1.png",
+        filter: "htmlcssjs"
     },
     {
         title: "FLAPPY BIRD",
@@ -203,7 +224,8 @@ const games = [
         tech: "HTML, CSS, JavaScript",
         github: "https://github.com/zegow8/flappy-bird-hand-gesture.git",
         demo: "https://zegow8.github.io/flappy-bird-hand-gesture/",
-        img: "assets/flappy1.png"
+        img: "assets/flappy1.png",
+        filter: "htmlcssjs"
     },
     {
         title: "PLATFORMER FINAL",
@@ -211,16 +233,19 @@ const games = [
         tech: "GDevelop 5",
         github: null,
         demo: "https://zegow8.itch.io/platformer-final",
-        img: "assets/plat1.png"
+        img: "assets/plat1.png",
+        filter: "gdevelop"
     }
 ];
 
-// Render Projects dengan Slideshow + Read More
-function renderProjects() {
+// ============ RENDER PROJECTS ============
+function renderProjects(filter = 'all') {
     const container = document.getElementById('projects-grid');
     if (!container) return;
 
-    container.innerHTML = projects.map((project, index) => {
+    const filtered = filter === 'all' ? projects : projects.filter(p => p.filter === filter);
+
+    container.innerHTML = filtered.map((project, index) => {
         let imageHtml = '';
         if (project.images && project.images.length > 0) {
             if (project.images.length === 1) {
@@ -247,12 +272,11 @@ function renderProjects() {
 
         const demoLink = project.demo ? `<a href="${project.demo}" target="_blank"><i class="fas fa-external-link-alt"></i></a>` : '';
 
-        // Potong deskripsi 120 karakter
         const shortDesc = project.desc.length > 120 ? project.desc.substring(0, 120) + '...' : project.desc;
         const isLong = project.desc.length > 120;
 
         return `
-            <div class="project-card">
+            <div class="project-card hidden-item delay-${(index % 10) + 1}">
                 <h3 class="project-title">${project.title}</h3>
                 ${imageHtml}
                 <div class="project-desc" id="desc-${index}">
@@ -311,17 +335,21 @@ function renderProjects() {
             });
         });
     });
+
+    // Trigger animation after render
+    setTimeout(() => {
+        document.querySelectorAll('.project-card, .design-card, .game-card').forEach(el => {
+            el.classList.add('show-item');
+        });
+    }, 50);
 }
 
 // Toggle deskripsi (expand/collapse)
 function toggleDesc(index) {
     const descs = document.querySelectorAll('.project-desc');
-    const btns = document.querySelectorAll('.project-card .read-more-btn');
     const isDesktop = window.innerWidth > 768;
     
     if (isDesktop) {
-        // Desktop (2 kolom): buka berpasangan
-        // index 0 & 1, 2 & 3, 4 & 5, 6 & 7, 8 & 9
         const pairStart = Math.floor(index / 2) * 2;
         const pairEnd = pairStart + 1;
         
@@ -335,7 +363,6 @@ function toggleDesc(index) {
             }
         });
     } else {
-        // Mobile (1 kolom): buka cuma 1
         if (descs[index]) {
             descs[index].classList.toggle('expanded');
             const btn = descs[index].parentElement.querySelector('.read-more-btn');
@@ -346,13 +373,15 @@ function toggleDesc(index) {
     }
 }
 
-// Render Design Gallery
-function renderDesigns() {
+// ============ RENDER DESIGN ============
+function renderDesigns(filter = 'all') {
     const container = document.getElementById('design-grid');
     if (!container) return;
-    
-    container.innerHTML = designs.map(design => `
-        <div class="design-card">
+
+    const filtered = filter === 'all' ? designs : designs.filter(d => d.filter === filter);
+
+    container.innerHTML = filtered.map((design, index) => `
+        <div class="design-card hidden-item delay-${(index % 8) + 1}">
             <img src="${design.imgFile}" alt="${design.title}" class="design-img" onclick="openLightbox(this.src)">
             <div class="design-info">
                 <h3 class="design-title">${design.title}</h3>
@@ -363,22 +392,28 @@ function renderDesigns() {
             </div>
         </div>
     `).join('');
+
+    setTimeout(() => {
+        document.querySelectorAll('.design-card').forEach(el => {
+            el.classList.add('show-item');
+        });
+    }, 50);
 }
 
-// Render Games
-function renderGames() {
+// ============ RENDER GAMES ============
+function renderGames(filter = 'all') {
     const container = document.getElementById('games-grid');
     if (!container) return;
 
-    container.innerHTML = games.map((game, index) => {
+    const filtered = filter === 'all' ? games : games.filter(g => g.filter === filter);
+
+    container.innerHTML = filtered.map((game, index) => {
         const shortDesc = game.desc.length > 120 ? game.desc.substring(0, 120) + '...' : game.desc;
         const isLong = game.desc.length > 120;
-
-        // Cek apakah github ada isinya atau null
         const githubLink = game.github ? `<a href="${game.github}" target="_blank"><i class="fab fa-github"></i></a>` : '';
 
         return `
-            <div class="game-card">
+            <div class="game-card hidden-item delay-${(index % 5) + 1}">
                 <h3 class="game-title">${game.title}</h3>
                 <img src="${game.img}" alt="${game.title}" class="game-img" onclick="openLightbox(this.src)">
                 <div class="game-desc" id="game-desc-${index}">
@@ -394,16 +429,20 @@ function renderGames() {
             </div>
         `;
     }).join('');
+
+    setTimeout(() => {
+        document.querySelectorAll('.game-card').forEach(el => {
+            el.classList.add('show-item');
+        });
+    }, 50);
 }
 
-// Toggle deskripsi game (expand/collapse)
+// Toggle deskripsi game
 function toggleGameDesc(index) {
     const descs = document.querySelectorAll('.game-desc');
-    const btns = document.querySelectorAll('.game-card .read-more-btn');
     const isDesktop = window.innerWidth > 768;
     
     if (isDesktop) {
-        // Desktop (2 kolom): buka berpasangan
         const pairStart = Math.floor(index / 2) * 2;
         const pairEnd = pairStart + 1;
         
@@ -417,7 +456,6 @@ function toggleGameDesc(index) {
             }
         });
     } else {
-        // Mobile (1 kolom): buka cuma 1
         if (descs[index]) {
             descs[index].classList.toggle('expanded');
             const btn = descs[index].parentElement.querySelector('.read-more-btn');
@@ -428,7 +466,70 @@ function toggleGameDesc(index) {
     }
 }
 
-// Lightbox functions
+// ============ FILTER FUNCTIONS ============
+function setupFilters() {
+    // Projects filter
+    const projectFilterBtns = document.querySelectorAll('#projects .filter-btn');
+    projectFilterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            projectFilterBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            const filter = this.dataset.filter;
+            renderProjects(filter);
+        });
+    });
+
+    // Design filter
+    const designFilterBtns = document.querySelectorAll('#design .filter-btn');
+    designFilterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            designFilterBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            const filter = this.dataset.filter;
+            renderDesigns(filter);
+        });
+    });
+
+    // Games filter
+    const gamesFilterBtns = document.querySelectorAll('#games .filter-btn');
+    gamesFilterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            gamesFilterBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            const filter = this.dataset.filter;
+            renderGames(filter);
+        });
+    });
+}
+
+// ============ ANIMASI SCROLL (INTERSECTION OBSERVER) ============
+function setupScrollAnimation() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                // Untuk items dengan stagger, tambahin class show-item dengan delay
+                const items = entry.target.querySelectorAll('.hidden-item');
+                items.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.classList.add('show-item');
+                    }, 100 + (index * 80));
+                });
+            }
+        });
+    }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    // Observe setiap section
+    document.querySelectorAll('.section .content').forEach(content => {
+        content.classList.add('hidden');
+        observer.observe(content);
+    });
+}
+
+// ============ LIGHTBOX ============
 function openLightbox(imgSrc) {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
@@ -441,7 +542,7 @@ function closeLightbox() {
     lightbox.style.display = 'none';
 }
 
-// Navbar Active Link on Scroll
+// ============ NAVBAR ============
 function updateActiveLink() {
     const sections = document.querySelectorAll('.section');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -464,7 +565,6 @@ function updateActiveLink() {
     });
 }
 
-// Navbar Hamburger Menu
 function setupNavbar() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
@@ -482,7 +582,6 @@ function setupNavbar() {
     }
 }
 
-// Smooth scroll for navbar links
 function setupSmoothScroll() {
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', (e) => {
@@ -499,7 +598,6 @@ function setupSmoothScroll() {
     });
 }
 
-// Scroll hint click
 function setupScrollHint() {
     const scrollHint = document.querySelector('.scroll-hint');
     if (scrollHint) {
@@ -515,11 +613,16 @@ function setupScrollHint() {
     }
 }
 
-// Event Listeners
+// ============ EVENT LISTENERS ============
 document.addEventListener('DOMContentLoaded', () => {
-    renderProjects();
-    renderDesigns();
-    renderGames();
+    // Render awal
+    renderProjects('all');
+    renderDesigns('all');
+    renderGames('all');
+    
+    // Setup
+    setupFilters();
+    setupScrollAnimation();
     setupNavbar();
     setupSmoothScroll();
     setupScrollHint();
