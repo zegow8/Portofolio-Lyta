@@ -1,6 +1,49 @@
-// Data Projects (10 Best Projects - Urutan Prioritas)
+// Data Projects (13 Projects - Urutan Prioritas)
 const projects = [
-    // ====== 7 PROYEK YANG DIROMBAK (NAIK KE ATAS) ======
+    // ====== 3 PROYEK BARU (NAIK KE ATAS) ======
+    {
+        title: "Recyclefy",
+        desc: `Recyclefy adalah platform pengelolaan sampah berbasis komunitas dengan sistem multi-user yang terdiri dari user, admin wilayah, dan super admin. Aplikasi dilengkapi dengan fitur autentikasi login dan registrasi berdasarkan role serta sistem tukar sampah jadi poin. User dapat menyetorkan sampah ke 3 wilayah (Kemayoran, Sumur Batu, Cempaka Putih) dan mendapatkan poin yang bisa ditukar dengan produk daur ulang.
+
+Admin wilayah memiliki dashboard yang menampilkan informasi total sampah masuk hari ini, total sampah keseluruhan, total barang diproduksi, barang menunggu persetujuan super admin, dan barang sudah di-ACC. Selain itu, admin wilayah dapat melihat riwayat sampah dari user, mengelola stok sampah, memproduksi barang daur ulang berdasarkan resep dari super admin, mengirim barang produksi ke super admin, serta melihat riwayat produksi dengan tiga status yaitu tersedia, pending, dan selesai.
+
+Super admin memiliki dashboard lengkap yang menampilkan total user, total admin, barang nunggu ACC, total stok, total transaksi, total koin, total jenis sampah, dan total resep. Super admin dapat mengelola seluruh user, mengelola jenis sampah melalui fitur CRUD, mengelola resep daur ulang dengan bahan baku dari jenis sampah, mengelola wilayah, mengonfirmasi kiriman barang dari admin wilayah, dan mengelola transaksi pembelian user dengan tiga status yaitu dipesan, dikirim, dan selesai.
+
+Pada sisi user, tersedia dashboard aktivitas yang menampilkan total poin, poin terpakai, total setor, total unit sampah, dan total berat. User dapat melihat daftar produk di toko dengan fitur pencarian dan filter harga, melakukan pemesanan produk dengan poin yang dimiliki, melihat riwayat setor dan riwayat pembelian, serta mengelola akun melalui fitur ubah nama, no telepon, alamat, dan kata sandi. Sistem akan menghitung total poin secara otomatis saat user menyetorkan sampah dan mengurangi poin saat user membeli produk. Stok barang akan berkurang secara otomatis setelah pembelian dan bertambah saat super admin mengonfirmasi kiriman dari admin wilayah.`,
+        tech: "Next.js, PostgreSQL, Prisma",
+        github: "https://github.com/zegow8/recyclefy",
+        demo: null,
+        images: ["assets/rec1.png", "assets/rec2.png", "assets/rec3.png"],
+        filter: "nextjs"
+    },
+    {
+        title: "Budgetify",
+        desc: `Budgetify adalah aplikasi pengelola keuangan pribadi berbasis web yang dikembangkan dengan PHP Native dan MySQL. Aplikasi ini dirancang untuk membantu individu mencatat, memantau, dan mengontrol arus keuangan sehari-hari secara praktis dan terstruktur.
+
+Fitur unggulan aplikasi ini meliputi sistem autentikasi pengguna (registrasi dan login), manajemen transaksi (CRUD pemasukan dan pengeluaran), statistik visual berbentuk grafik pie chart per kategori, serta dompet digital yang membedakan saldo tunai (cash) dan saldo elektronik, dilengkapi dengan fitur pemindahan dana antar dompet. Pengguna juga dapat membuat kategori transaksi secara mandiri sesuai kebutuhan, serta melakukan filtering data berdasarkan bulan, kategori, rentang tanggal, dan kata kunci.
+
+Dari sisi teknis, aplikasi ini menggunakan PDO untuk koneksi database yang aman, jQuery & AJAX untuk interaksi tanpa reload halaman, serta Chart.js untuk visualisasi data. Desain antarmuka dibangun dengan pendekatan responsive sehingga optimal diakses melalui laptop maupun perangkat mobile. Aplikasi ini juga dilengkapi dengan fitur auto-detect environment, sehingga dapat berjalan baik di lingkungan localhost maupun server production.`,
+        tech: "PHP Native, MySQL, JavaScript",
+        github: "https://github.com/zegow8/budgetify",
+        demo: "http://budgetify.free.nf/index.php",
+        images: ["assets/bud1.png", "assets/bud2.png", "assets/bud3.png", "assets/bud4.png"],
+        filter: "phpnative"
+    },
+    {
+        title: "Portofolio Pancasila Lyta",
+        desc: `Portofolio ini merupakan aplikasi web berbasis PHP Native dan MySQL yang dirancang untuk mendokumentasikan penerapan nilai-nilai Pancasila dalam kegiatan sehari-hari. Aplikasi dikembangkan dengan sistem multi-user yang terdiri dari dua peran, yaitu admin dan user, dengan fitur autentikasi login berbasis role untuk memastikan keamanan akses data.
+
+Pada sisi admin, tersedia dashboard yang menampilkan informasi statistik seperti total kegiatan, total refleksi, dan total penilaian yang telah dibuat. Admin dapat mengelola seluruh data kegiatan harian melalui fitur CRUD (Create, Read, Update, Delete), mengunggah dokumentasi berupa gambar, memberikan penilaian mingguan beserta alasan, serta menulis refleksi bulanan. Sistem juga dilengkapi dengan fitur pencarian data berdasarkan bulan dan tahun, serta tampilan kalender interaktif yang menunjukkan aktivitas per tanggal beserta keterangan minggu ke-berapa.
+
+Pada sisi pengguna (user), tersedia tampilan portofolio yang menampilkan data diri, foto profil, logo dan sila Pancasila, serta laporan kegiatan bulanan dalam bentuk tabel mingguan. Pengguna dapat melihat seluruh data kegiatan, dokumentasi, penilaian, dan refleksi yang telah diinput oleh admin tanpa dapat mengubah atau menghapus data. Sistem juga menampilkan kalender yang menunjukkan tanggal-tanggal yang telah terisi data, sehingga memudahkan pengguna dalam melihat pola aktivitas selama satu bulan penuh.`,
+        tech: "PHP Native, MySQL, CSS Native",
+        github: "https://github.com/zegow8/Portofolio-Pancasila-Lyta",
+        demo: "http://porto-pancasila-lyta.free.nf/?i=1",
+        images: ["assets/portopsila1.png", "assets/portopsila2.png", "assets/portopsila3.png"],
+        filter: "phpnative"
+    },
+
+    // ====== 7 PROYEK LAMA (ROMBAK) ======
     {
         title: "Raiental",
         desc: `Platform penyewaan website dan game berbasis web dengan sistem multi-user yang terdiri dari admin dan user. Aplikasi dilengkapi dengan fitur autentikasi login dan registrasi berdasarkan role serta sistem penyewaan digital dengan pilihan durasi per jam, hari, minggu, dan bulan.
@@ -189,8 +232,31 @@ const designs = [
     }
 ];
 
-// Data Games (5 Games)
+// Data Games (6 Games)
 const games = [
+    // ====== 1 GAME BARU (NAIK KE ATAS) ======
+    {
+        title: "Rain Pairs Draft",
+        desc: `rain pairs merupakan game memory card bertema teknologi yang dikembangkan sebagai permainan untuk menguji kemampuan pemain dalam mengingat posisi dan mencocokkan pasangan kartu. game ini menggunakan berbagai ikon dan nama teknologi seperti ai tools, bahasa pemrograman, serta software development sebagai elemen kartu.
+
+pada awal permainan, pemain diberikan kesempatan untuk melihat susunan kartu sebelum seluruh kartu ditutup. setelah permainan dimulai, pemain harus membuka dua kartu secara bergantian dan mencari kartu yang memiliki pasangan yang sama. apabila kedua kartu cocok, pasangan tersebut akan tetap terbuka dan pemain mendapatkan poin. apabila tidak cocok, kartu akan kembali tertutup sehingga pemain perlu mengingat posisi kartu yang sebelumnya telah dibuka.
+
+untuk membuat gameplay lebih menantang, rain pairs memiliki sistem combo yang memberikan tambahan skor ketika pemain berhasil menemukan pasangan secara berturut-turut. kesalahan dalam mencocokkan kartu akan mereset combo dan memberikan pengurangan skor. permainan juga dibatasi dengan timer 180 detik, sehingga pemain harus menyelesaikan seluruh pasangan sebelum waktu habis.
+
+game ini terdiri dari 24 kartu atau 12 pasangan, serta dilengkapi dengan sistem scoring, combo, timer, kondisi menang/kalah, input nama pemain, dan leaderboard untuk menampilkan peringkat berdasarkan skor yang diperoleh.
+
+secara keseluruhan, rain pairs dirancang untuk menggabungkan konsep permainan memory sederhana dengan elemen kompetitif melalui manajemen waktu, strategi mengingat posisi kartu, dan sistem combo, sehingga pemain tidak hanya bergantung pada keberuntungan saat membuka kartu.
+platform: html5
+genre: card / memory game
+jumlah kartu: 24 kartu / 12 pasangan
+fitur utama: timer, scoring, combo system, leaderboard, win/lose system, player name input.`,
+        tech: "GDevelop 5",
+        github: null,
+        demo: "https://zegow8.itch.io/rain-pairs",
+        img: "assets/pai1.png",
+        filter: "gdevelop"
+    },
+    // ====== 5 GAME LAMA ======
     {
         title: "MEOWMORY GAME",
         desc: "Game memory match 4×4 dengan gambar kucing. Pemain harus mencocokkan 8 pasang kartu dalam waktu 60 detik. Setiap kartu menampilkan foto kucing yang unik, dan pemain ditantang untuk mengingat posisi setiap gambar. Fitur: timer 60 detik, hitungan langkah, high score tersimpan di localStorage, dan kontrol tap/klik yang responsif di desktop maupun HP.",
@@ -238,6 +304,22 @@ const games = [
     }
 ];
 
+// Data Certifications
+const certifications = [
+    {
+        title: "TECC (Test of English Communication Competency)",
+        desc: "Score: 650 (setara TOEIC 650) – LCC Prediction, Agustus 2025",
+        detail: "Listening: 360 | Reading: 290",
+        imgFile: "assets/TECC-Lyta.png"
+    },
+    {
+        title: "UKBI (Uji Kemahiran Berbahasa Indonesia)",
+        desc: "Skor: 673 – Peringkat: Sangat Unggul",
+        detail: "Mendengarkan: 605 | Merespons Kaidah: 704 | Membaca: 710",
+        imgFile: "assets/UKBI lyta.png"
+    }
+];
+
 // ============ RENDER PROJECTS ============
 function renderProjects(filter = 'all') {
     const container = document.getElementById('projects-grid');
@@ -276,7 +358,7 @@ function renderProjects(filter = 'all') {
         const isLong = project.desc.length > 120;
 
         return `
-            <div class="project-card hidden-item delay-${(index % 10) + 1}">
+            <div class="project-card hidden-item delay-${(index % 13) + 1}">
                 <h3 class="project-title">${project.title}</h3>
                 ${imageHtml}
                 <div class="project-desc" id="desc-${index}">
@@ -336,9 +418,8 @@ function renderProjects(filter = 'all') {
         });
     });
 
-    // Trigger animation after render
     setTimeout(() => {
-        document.querySelectorAll('.project-card, .design-card, .game-card').forEach(el => {
+        document.querySelectorAll('.project-card').forEach(el => {
             el.classList.add('show-item');
         });
     }, 50);
@@ -466,6 +547,29 @@ function toggleGameDesc(index) {
     }
 }
 
+// ============ RENDER CERTIFICATIONS ============
+function renderCertifications() {
+    const container = document.getElementById('cert-grid');
+    if (!container) return;
+
+    container.innerHTML = certifications.map((cert, index) => `
+        <div class="cert-card hidden-item delay-${(index % 2) + 1}">
+            <img src="${cert.imgFile}" alt="${cert.title}" class="cert-img" onclick="openLightbox(this.src)">
+            <div class="cert-info">
+                <h3 class="cert-title">${cert.title}</h3>
+                <p class="cert-desc">${cert.desc}</p>
+                <p class="cert-detail">${cert.detail}</p>
+            </div>
+        </div>
+    `).join('');
+
+    setTimeout(() => {
+        document.querySelectorAll('.cert-card').forEach(el => {
+            el.classList.add('show-item');
+        });
+    }, 50);
+}
+
 // ============ FILTER FUNCTIONS ============
 function setupFilters() {
     // Projects filter
@@ -508,7 +612,6 @@ function setupScrollAnimation() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('show');
-                // Untuk items dengan stagger, tambahin class show-item dengan delay
                 const items = entry.target.querySelectorAll('.hidden-item');
                 items.forEach((item, index) => {
                     setTimeout(() => {
@@ -522,7 +625,6 @@ function setupScrollAnimation() {
         rootMargin: '0px 0px -50px 0px'
     });
 
-    // Observe setiap section
     document.querySelectorAll('.section .content').forEach(content => {
         content.classList.add('hidden');
         observer.observe(content);
@@ -615,23 +717,20 @@ function setupScrollHint() {
 
 // ============ EVENT LISTENERS ============
 document.addEventListener('DOMContentLoaded', () => {
-    // Render awal
     renderProjects('all');
     renderDesigns('all');
     renderGames('all');
+    renderCertifications();
     
-    // Setup
     setupFilters();
     setupScrollAnimation();
     setupNavbar();
     setupSmoothScroll();
     setupScrollHint();
     
-    // Active link on scroll
     window.addEventListener('scroll', updateActiveLink);
     updateActiveLink();
     
-    // Lightbox close
     const lightbox = document.getElementById('lightbox');
     const closeBtn = document.querySelector('.close-lightbox');
     if (closeBtn) {
