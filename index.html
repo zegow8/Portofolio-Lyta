@@ -1,173 +1,366 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Earlyta | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <title>Earlyta Dwi Anggraeni | Portfolio</title>
+    <meta name="description" content="Portfolio Earlyta Dwi Anggraeni - Full Stack Developer & UI/UX Enthusiast. Showcase of projects, UI designs, games, and certifications.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- BACKGROUND INTERACTIVE CANVAS -->
+    <canvas id="bg-canvas" class="bg-canvas"></canvas>
+
+    <!-- SCROLL PROGRESS BAR -->
+    <div id="scroll-progress" class="scroll-progress"></div>
+
     <!-- NAVBAR -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="#home">Earlyta Dwi Anggraeni</a>
+                <a href="#home">
+                    <span class="logo-mark"><i class="fas fa-code"></i></span>
+                    <span class="logo-text">Earlyta Dwi Anggraeni</span>
+                    <span class="status-dot" title="Available for opportunities"></span>
+                </a>
             </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#design" class="nav-link">Design</a></li>
-                <li><a href="#games" class="nav-link">Games</a></li>
-                <li><a href="#certification" class="nav-link">Certification</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active"><i class="fas fa-home-alt"></i> Home</a></li>
+                <li><a href="#about" class="nav-link"><i class="fas fa-user-circle"></i> About</a></li>
+                <li><a href="#skills" class="nav-link"><i class="fas fa-layer-group"></i> Skills</a></li>
+                <li><a href="#projects" class="nav-link"><i class="fas fa-laptop-code"></i> Projects</a></li>
+                <li><a href="#design" class="nav-link"><i class="fas fa-pen-nib"></i> Design</a></li>
+                <li><a href="#games" class="nav-link"><i class="fas fa-gamepad"></i> Games</a></li>
+                <li><a href="#certification" class="nav-link"><i class="fas fa-award"></i> Certification</a></li>
+                <li><a href="#contact" class="nav-link"><i class="fas fa-paper-plane"></i> Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Ganti Tema (Dark / Light)">
+                    <i class="fas fa-sun sun-icon"></i>
+                    <i class="fas fa-moon moon-icon"></i>
+                </button>
+                <div class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </nav>
 
     <main>
-        <!-- HOME -->
-        <section id="home" class="section">
-            <div class="content">
-                <h1 class="greeting">Heeyy, saya Earlyta.</h1>
-                <p class="tagline">Full Stack Developer & UI/UX Enthusiast.</p>
+        <!-- HOME SECTION -->
+        <section id="home" class="section hero-section">
+            <div class="content hero-content">
+                <div class="hero-badge">
+                    <span class="pulse-indicator"></span>
+                    <span class="badge-text">Siswa RPL Kelas 12 &bull; Full Stack & UI/UX</span>
+                </div>
+                
+                <h1 class="greeting">
+                    Heeyy, saya <span class="gradient-text">Earlyta</span>.
+                </h1>
+                
+                <div class="tagline-wrapper">
+                    <p class="tagline">
+                        <span id="typewriter-text">Full Stack Developer & UI/UX Enthusiast.</span><span class="typewriter-cursor"></span>
+                    </p>
+                </div>
+                
                 <p class="subtagline">n here's my portofolio!</p>
-                <div class="scroll-hint">
+
+                <!-- STATS COUNTER BAR (DYNAMIC & RESPONSIVE) -->
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <div class="stat-number" id="stat-projects-count" data-target="17">17</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number stat-github" id="github-repo-count" data-target="34">34</div>
+                        <div class="stat-label"><i class="fab fa-github"></i> GitHub Repos</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="stat-designs-count" data-target="9">9</div>
+                        <div class="stat-label">UI Designs</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="stat-games-count" data-target="7">7</div>
+                        <div class="stat-label">Games</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="2">2</div>
+                        <div class="stat-label">Certifications</div>
+                    </div>
+                </div>
+
+                <!-- CTA BUTTONS -->
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> Lihat Proyek
+                    </a>
+                    <a href="https://github.com/zegow8" target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-github"></i> GitHub Profile
+                    </a>
+                    <a href="#contact" class="btn btn-ghost">
+                        <i class="fas fa-envelope-open-text"></i> Hubungi Saya
+                    </a>
+                    <button class="btn btn-ghost" id="quick-copy-email" title="Salin Email">
+                        <i class="fas fa-copy"></i> Salin Email
+                    </button>
+                </div>
+
+                <div class="scroll-hint" id="scroll-hint">
+                    <span class="scroll-text">Gulir ke bawah</span>
+                    <div class="mouse-icon">
+                        <div class="wheel"></div>
+                    </div>
                     <i class="fas fa-chevron-down"></i>
                 </div>
             </div>
         </section>
 
-        <!-- ABOUT -->
+        <!-- ABOUT SECTION -->
         <section id="about" class="section">
             <div class="content">
-                <h2 class="section-title">About Me</h2>
+                <div class="section-header">
+                    <span class="section-badge"><i class="fas fa-user"></i> Biodata</span>
+                    <h2 class="section-title">About Me</h2>
+                </div>
                 <div class="about-wrapper">
-                    <div class="about-image">
-                        <img src="assets/lytacv.png" alt="Earlyta" id="profile-img" onerror="this.src='https://via.placeholder.com/300x300?text=Earlyta'">
+                    <div class="about-image-card">
+                        <div class="about-image-frame">
+                            <img src="assets/lytacv.png" alt="Earlyta Dwi Anggraeni" id="profile-img" onerror="this.src='https://via.placeholder.com/300x300?text=Earlyta'">
+                            <div class="about-glow"></div>
+                        </div>
+                        <div class="about-floating-badge">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <strong>Earlyta Dwi A.</strong>
+                                <span>Software Engineering</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="about-text">
-                        <p>Saya adalah siswa rekayasa perangkat lunak yang saat ini duduk di bangku kelas 12. Berfokus pada pengembangan website dan aplikasi. Memiliki ketertarikan pada frontend maupun backend development, saya senang membangun sistem yang tidak hanya berjalan dengan baik, tetapi juga memiliki tampilan yang nyaman digunakan.</p>
+                    <div class="about-text-content">
+                        <div class="about-lead">
+                            <i class="fas fa-quote-left quote-icon"></i>
+                            <p>Saya adalah siswa rekayasa perangkat lunak yang saat ini duduk di bangku kelas 12. Berfokus pada pengembangan website dan aplikasi. Memiliki ketertarikan pada frontend maupun backend development, saya senang membangun sistem yang tidak hanya berjalan dengan baik, tetapi juga memiliki tampilan yang nyaman digunakan.</p>
+                        </div>
                         <p>Selama belajar dan mengembangkan proyek pribadi, saya telah mengerjakan berbagai aplikasi seperti sistem kasir, aplikasi manajemen data, website informatif, dan aplikasi produktivitas. Saat ini saya terus memperdalam kemampuan di bidang web development, database, dan pengembangan aplikasi sambil membangun portofolio yang mencerminkan kemampuan serta kreativitas saya.</p>
+                        
+                        <!-- Mini Highlights Cards -->
+                        <div class="about-highlights">
+                            <div class="highlight-chip">
+                                <i class="fas fa-check-circle"></i> Fullstack Web Solutions
+                            </div>
+                            <div class="highlight-chip">
+                                <i class="fas fa-mobile-alt"></i> Android Development
+                            </div>
+                            <div class="highlight-chip">
+                                <i class="fas fa-palette"></i> Figma UI/UX Prototyping
+                            </div>
+                            <div class="highlight-chip">
+                                <i class="fas fa-shield-alt"></i> Clean & Secure Code
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SKILLS -->
+        <!-- SKILLS SECTION -->
         <section id="skills" class="section">
             <div class="content">
-                <h2 class="section-title">Skills</h2>
+                <div class="section-header">
+                    <span class="section-badge"><i class="fas fa-tools"></i> Keahlian Teknis</span>
+                    <h2 class="section-title">Skills</h2>
+                </div>
                 <div class="skills-container">
                     <div class="skills-category">
-                        <h3 class="category-title">🌐 Web Development</h3>
+                        <div class="category-header">
+                            <div class="category-icon-box"><i class="fas fa-globe"></i></div>
+                            <h3 class="category-title">Web Development</h3>
+                        </div>
                         <div class="skills-list">
-                            <span class="skill-item">Next.js</span>
-                            <span class="skill-item">Laravel</span>
-                            <span class="skill-item">PHP Native</span>
-                            <span class="skill-item">HTML</span>
-                            <span class="skill-item">CSS</span>
-                            <span class="skill-item">JavaScript</span>
+                            <span class="skill-item"><i class="fab fa-react"></i> Next.js</span>
+                            <span class="skill-item"><i class="fab fa-laravel"></i> Laravel</span>
+                            <span class="skill-item"><i class="fab fa-php"></i> PHP Native</span>
+                            <span class="skill-item"><i class="fab fa-html5"></i> HTML</span>
+                            <span class="skill-item"><i class="fab fa-css3-alt"></i> CSS</span>
+                            <span class="skill-item"><i class="fab fa-js"></i> JavaScript</span>
                         </div>
                     </div>
+                    
                     <div class="skills-category">
-                        <h3 class="category-title">📱 Mobile Development</h3>
+                        <div class="category-header">
+                            <div class="category-icon-box"><i class="fas fa-mobile-screen"></i></div>
+                            <h3 class="category-title">Mobile Development</h3>
+                        </div>
                         <div class="skills-list">
-                            <span class="skill-item">Android Studio - Java</span>
-                            <span class="skill-item">GDvelop</span>
-                            <span class="skill-item">Unity</span>
+                            <span class="skill-item"><i class="fab fa-android"></i> Android Studio - Java</span>
+                            <span class="skill-item"><i class="fas fa-gamepad"></i> GDvelop</span>
+                            <span class="skill-item"><i class="fab fa-unity"></i> Unity</span>
                         </div>
                     </div>
+
                     <div class="skills-category">
-                        <h3 class="category-title">🗄️ Database</h3>
+                        <div class="category-header">
+                            <div class="category-icon-box"><i class="fas fa-database"></i></div>
+                            <h3 class="category-title">Database</h3>
+                        </div>
                         <div class="skills-list">
-                            <span class="skill-item">PostgreSQL</span>
-                            <span class="skill-item">Firebase</span>
+                            <span class="skill-item"><i class="fas fa-server"></i> PostgreSQL</span>
+                            <span class="skill-item"><i class="fas fa-fire"></i> Firebase</span>
                         </div>
                     </div>
+
                     <div class="skills-category">
-                        <h3 class="category-title">🛠️ Tools & Environment</h3>
+                        <div class="category-header">
+                            <div class="category-icon-box"><i class="fas fa-screwdriver-wrench"></i></div>
+                            <h3 class="category-title">Tools & Environment</h3>
+                        </div>
                         <div class="skills-list">
-                            <span class="skill-item">Laragon</span>
-                            <span class="skill-item">Git & GitHub</span>
+                            <span class="skill-item"><i class="fas fa-terminal"></i> Laragon</span>
+                            <span class="skill-item"><i class="fab fa-git-alt"></i> Git & GitHub</span>
                         </div>
                     </div>
+
                     <div class="skills-category">
-                        <h3 class="category-title">🎨 Design</h3>
+                        <div class="category-header">
+                            <div class="category-icon-box"><i class="fas fa-pen-ruler"></i></div>
+                            <h3 class="category-title">Design</h3>
+                        </div>
                         <div class="skills-list">
-                            <span class="skill-item">Figma</span>
+                            <span class="skill-item"><i class="fab fa-figma"></i> Figma</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- PROJECTS -->
+        <!-- PROJECTS SECTION -->
         <section id="projects" class="section">
             <div class="content">
-                <h2 class="section-title">13 Best Projects</h2>
-                <div class="filter-container">
-                    <button class="filter-btn active" data-filter="all">ALL</button>
-                    <button class="filter-btn" data-filter="nextjs">Next.js</button>
-                    <button class="filter-btn" data-filter="laravel">Laravel</button>
-                    <button class="filter-btn" data-filter="phpnative">PHP Native</button>
-                    <button class="filter-btn" data-filter="htmlcssjs">HTML CSS JS</button>
-                    <button class="filter-btn" data-filter="android">Android Studio</button>
+                <div class="section-header">
+                    <span class="section-badge"><i class="fas fa-code-branch"></i> Portofolio Karya</span>
+                    <h2 class="section-title"><span id="projects-heading-count">17</span> Projects</h2>
                 </div>
+
+                <!-- SEARCH & FILTER TOOLBAR -->
+                <div class="toolbar-wrapper">
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" id="project-search" placeholder="Cari nama proyek, fitur, atau teknologi..." autocomplete="off">
+                        <button id="clear-search" class="clear-search-btn" title="Hapus pencarian"><i class="fas fa-times"></i></button>
+                    </div>
+
+                    <div class="filter-container" id="project-filters">
+                        <button class="filter-btn active" data-filter="all"><span class="btn-text">ALL</span> <span class="badge-count" id="badge-all">17</span></button>
+                        <button class="filter-btn" data-filter="nextjs"><span class="btn-text">Next.js</span> <span class="badge-count">3</span></button>
+                        <button class="filter-btn" data-filter="laravel"><span class="btn-text">Laravel</span> <span class="badge-count">4</span></button>
+                        <button class="filter-btn" data-filter="phpnative"><span class="btn-text">PHP Native</span> <span class="badge-count">5</span></button>
+                        <button class="filter-btn" data-filter="htmlcssjs"><span class="btn-text">HTML CSS JS</span> <span class="badge-count">2</span></button>
+                        <button class="filter-btn" data-filter="android"><span class="btn-text">Android Studio</span> <span class="badge-count">3</span></button>
+                    </div>
+
+                    <div class="results-toolbar-status">
+                        <div class="results-info" id="project-results-info">
+                            Menampilkan <strong id="project-visible-count">17</strong> dari 17 proyek
+                        </div>
+                    </div>
+                </div>
+
                 <div class="projects-grid" id="projects-grid"></div>
             </div>
         </section>
 
-        <!-- DESIGN -->
+        <!-- DESIGN SECTION -->
         <section id="design" class="section">
             <div class="content">
-                <h2 class="section-title">8 Best Design Gallery</h2>
-                <div class="filter-container">
-                    <button class="filter-btn active" data-filter="all">ALL</button>
-                    <button class="filter-btn" data-filter="desktop">Desktop</button>
-                    <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <div class="section-header">
+                    <span class="section-badge"><i class="fas fa-bezier-curve"></i> UI/UX Prototype</span>
+                    <h2 class="section-title"><span id="design-heading-count">9</span> Design Gallery</h2>
                 </div>
+
+                <div class="toolbar-wrapper">
+                    <div class="filter-container" id="design-filters">
+                        <button class="filter-btn active" data-filter="all"><span class="btn-text">ALL</span> <span class="badge-count">9</span></button>
+                        <button class="filter-btn" data-filter="desktop"><span class="btn-text">Desktop</span> <span class="badge-count">4</span></button>
+                        <button class="filter-btn" data-filter="mobile"><span class="btn-text">Mobile</span> <span class="badge-count">5</span></button>
+                    </div>
+                </div>
+
                 <div class="design-grid" id="design-grid"></div>
             </div>
         </section>
 
-        <!-- GAMES -->
+        <!-- GAMES SECTION -->
         <section id="games" class="section">
             <div class="content">
-                <h2 class="section-title">Games</h2>
-                <div class="filter-container">
-                    <button class="filter-btn active" data-filter="all">ALL</button>
-                    <button class="filter-btn" data-filter="htmlcssjs">HTML CSS JS</button>
-                    <button class="filter-btn" data-filter="gdevelop">GDevelop 5</button>
+                <div class="section-header">
+                    <span class="section-badge"><i class="fas fa-dice"></i> Game Development</span>
+                    <h2 class="section-title">Games</h2>
                 </div>
+
+                <div class="toolbar-wrapper">
+                    <div class="filter-container" id="games-filters">
+                        <button class="filter-btn active" data-filter="all"><span class="btn-text">ALL</span> <span class="badge-count">7</span></button>
+                        <button class="filter-btn" data-filter="htmlcssjs"><span class="btn-text">HTML CSS JS</span> <span class="badge-count">4</span></button>
+                        <button class="filter-btn" data-filter="gdevelop"><span class="btn-text">GDevelop 5</span> <span class="badge-count">3</span></button>
+                    </div>
+                </div>
+
                 <div class="games-grid" id="games-grid"></div>
             </div>
         </section>
 
-        <!-- CERTIFICATION -->
+        <!-- CERTIFICATION SECTION -->
         <section id="certification" class="section">
             <div class="content">
-                <h2 class="section-title">Certification</h2>
+                <div class="section-header">
+                    <span class="section-badge"><i class="fas fa-stamp"></i> Uji Kompetensi Resmi</span>
+                    <h2 class="section-title">Certification</h2>
+                </div>
                 <div class="cert-grid" id="cert-grid"></div>
             </div>
         </section>
 
-        <!-- CONTACT -->
+        <!-- CONTACT SECTION -->
         <section id="contact" class="section">
             <div class="content">
-                <h2 class="section-title">Contact</h2>
+                <div class="section-header">
+                    <span class="section-badge"><i class="fas fa-comments"></i> Hubungi & Terhubung</span>
+                    <h2 class="section-title">Contact</h2>
+                </div>
                 <p class="contact-text">Feel free to reach me</p>
-                <div class="contact-icons">
-                    <a href="https://wa.me/6281547184307" target="_blank" class="contact-icon"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://instagram.com/eddlyaa__" target="_blank" class="contact-icon"><i class="fab fa-instagram"></i></a>
-                    <a href="mailto:earlytadwi7@gmail.com" class="contact-icon"><i class="fas fa-envelope"></i></a>
-                    <a href="https://github.com/zegow8" target="_blank" class="contact-icon"><i class="fab fa-github"></i></a>
+
+                <div class="contact-icons-row">
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/6281547184307" target="_blank" class="contact-icon-btn wa" title="WhatsApp" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                        <span class="contact-tooltip">WhatsApp</span>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://instagram.com/eddlyaa__" target="_blank" class="contact-icon-btn ig" title="Instagram" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span class="contact-tooltip">Instagram</span>
+                    </a>
+
+                    <!-- Email -->
+                    <a href="mailto:earlytadwi7@gmail.com" class="contact-icon-btn mail copyable-card" data-copy="earlytadwi7@gmail.com" title="Email" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                        <span class="contact-tooltip">earlytadwi7@gmail.com</span>
+                    </a>
+
+                    <!-- GitHub -->
+                    <a href="https://github.com/zegow8" target="_blank" class="contact-icon-btn gh" title="GitHub" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                        <span class="contact-tooltip">GitHub</span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -175,14 +368,39 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <p>last update on 3 September 2026</p>
+        <div class="footer-container">
+            <div class="footer-top">
+                <span class="footer-name">Earlyta Dwi Anggraeni</span>
+                <span class="footer-dot">&bull;</span>
+                <span class="footer-role">Full Stack Developer & UI/UX Enthusiast</span>
+            </div>
+            <p class="footer-update">last update on 8 November 2026</p>
+        </div>
     </footer>
 
-    <!-- Lightbox untuk zoom in gambar -->
-    <div id="lightbox" class="lightbox">
-        <span class="close-lightbox">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
+    <!-- BACK TO TOP BUTTON -->
+    <button id="back-to-top" class="back-to-top" aria-label="Kembali ke atas">
+        <svg class="progress-ring" width="48" height="48">
+            <circle class="progress-ring-circle-bg" stroke-width="3" fill="transparent" r="20" cx="24" cy="24"/>
+            <circle class="progress-ring-circle" id="progress-circle" stroke-width="3" fill="transparent" r="20" cx="24" cy="24"/>
+        </svg>
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- LIGHTBOX MODAL WITH FULL CAPTION & ZOOM -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true">
+        <div class="lightbox-overlay"></div>
+        <div class="lightbox-wrapper">
+            <button class="close-lightbox" title="Tutup (Esc)">&times;</button>
+            <div class="lightbox-media">
+                <img class="lightbox-content" id="lightbox-img" alt="Tinjauan Gambar">
+            </div>
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
     </div>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div id="toast-container" class="toast-container"></div>
 
     <script src="script.js"></script>
 </body>

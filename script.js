@@ -1,6 +1,56 @@
-// Data Projects (13 Projects - Urutan Prioritas)
+/**
+ * PORTOFOLIO 2026 - Earlyta Dwi Anggraeni
+ * Core Application Logic, Interactive Effects & Data Showcase
+ */
+
+// ==========================================
+// DATA: PROJECTS (17 Projects Total)
+// ==========================================
 const projects = [
-    // ====== 3 PROYEK BARU (NAIK KE ATAS) ======
+    // ====== 4 PROYEK TERBARU (8 NOVEMBER 2026) ======
+    {
+        title: "BAZAR XII-PPLG 17 September 2026",
+        desc: `Bazar XII-PPLG adalah website katalog event interaktif untuk mempermudah pengunjung melihat menu dan memesan produk bazar langsung dari smartphone mereka. Dibangun menggunakan Vanilla HTML, CSS, dan JavaScript murni, website ini menyajikan 10 produk dengan layout responsif (4 kolom di laptop, 2 kolom di HP).
+Website ini dilengkapi fitur Direct-to-WhatsApp yang otomatis mengisi pesan berisi nama produk yang dipilih, memangkas alur pemesanan agar lebih cepat. Pengunjung juga dapat melihat detail foto produk lebih besar melalui fitur Kustom Lightbox yang mendukung navigasi swipe.
+Untuk pengalaman pengguna, diterapkan desain antarmuka pastel dengan animasi transisi yang halus, serta fitur background music pintar yang menyesuaikan kebijakan autoplay browser.`,
+        tech: "HTML, CSS, JavaScript",
+        github: "https://github.com/zegow8/bazar17sept2026",
+        demo: "https://zegow8.github.io/bazar17sept2026/",
+        images: ["assets/101.png"],
+        filter: "htmlcssjs"
+    },
+    {
+        title: "GoAnywhere",
+        desc: `GoAnywhere adalah proyek kolaborasi kelompok (tim beranggotakan 5 orang) yang mengembangkan platform aplikasi web full-stack untuk mendigitalkan sistem penyewaan mobil dan motor di area Jabodetabek. Menggunakan framework Laravel, MySQL, dan Tailwind CSS, aplikasi ini memiliki tigas hak akses utama: User (mencari armada dan booking), Manager (mengelola stok dan memvalidasi pesanan), serta Superadmin (pusat kendali analitik dan data lintas cabang).
+Sistem ini menerapkan alur transaksi (workflow) yang terstruktur dan aman. Prosesnya dimulai saat User memilih kendaraan, melakukan pembayaran, dan statusnya berubah menjadi PAID (menunggu). Di tahap ini, Manager wajib memberikan persetujuan (Approval); setelah di-approve, status langsung berubah menjadi ACTIVE dan stok otomatis berkurang. Saat masa sewa habis dan User mengembalikan kendaraan, sistem akan menghitung denda secara otomatis (jika telat). Jika pengembalian berhasil (dan denda lunas), status menjadi COMPLETED dan stok unit otomatis kembali ke sistem.
+Melalui proyek kelompok ini, saya tidak hanya mengasah kemampuan teknis dalam membangun logika backend yang kompleks (seperti kalkulasi denda dan manajemen stok) serta desain antarmuka, tetapi juga melatih kemampuan kolaborasi tim yang solid, termasuk pengelolaan version control (Git/GitHub) untuk memastikan seluruh fitur berjalan sinkron tanpa konflik kode.`,
+        tech: "Laravel, MySQL, Tailwind CSS",
+        github: "https://github.com/lidyaaaa/GoAnywhere",
+        demo: null,
+        images: ["assets/103.png", "assets/104.png", "assets/105.png", "assets/106.png"],
+        filter: "laravel"
+    },
+    {
+        title: "KJP #1 LATIHAN USK",
+        desc: `Aplikasi web full-stack berbasis PHP Native dan MySQL yang dibangun sebagai latihan Uji Sertifikasi Kompetensi. Sistem ini mensimulasikan alur pengumpulan data Kartu Jakarta Pintar dengan menerapkan pembagian hak akses (multi-role): Guru sebagai admin yang bertugas mengelola data kelas, memantau statistik input, dan memvalidasi (ACC) data siswa; serta Murid yang dapat melakukan registrasi mandiri, mengisi formulir KJP secara lengkap, dan mengelola datanya sendiri. Dilengkapi dengan fitur pencarian dinamis, sistem validasi status berlapis, dan antarmuka pengguna bergaya Neo-Brutalism yang dirancang manual tanpa template—menunjukkan pemahaman menyeluruh mulai dari perancangan database relasional, keamanan autentikasi, hingga pembuatan UI/UX yang responsif.`,
+        tech: "PHP Native, MySQL",
+        github: "https://github.com/zegow8/manajemen-KJP.git",
+        demo: null,
+        images: ["assets/107.png", "assets/108.png", "assets/109.png"],
+        filter: "phpnative"
+    },
+    {
+        title: "rainpedia",
+        desc: `Rainpedia adalah platform e-commerce buku dan sistem perpustakaan digital terintegrasi berbasis Laravel yang dirancang responsif di ponsel pintar serta dilindungi middleware keamanan untuk merespons kode 401 saat pengunjung liar mencoba mengakses halaman tertutup dan kode 403 saat terjadi pelanggaran hak akses antar akun. Pengelolaan aplikasi ini diatur melalui panel sidebar admin yang memuat Dashboard analitik, modul Data Buku dengan validasi pencegahan duplikasi judul, Data Pembelian, Data Peminjaman, Data Pengembalian, Pendapatan Denda, Manajemen Pengguna, dan Layanan Chat, yang diselaraskan dengan kemudahan navbar pengguna untuk menjelajahi Katalog berpaginasi rapi lima belas buku, Keranjang Belanja, Riwayat Transaksi, Riwayat Pinjaman, Pusat Notifikasi empat kategori, serta bantuan Chat langsung.
+Alur transaksinya menyediakan pilihan keranjang belanja maupun tombol Beli Sekarang untuk checkout instan tanpa mencampur item lain, dengan transisi status pesanan bertahap dari Waiting Confirmation saat menunggu verifikasi pembayaran oleh admin, Processing saat barang mulai dikemas, Shipped bersama nomor resi pengiriman, hingga ditutup dengan status Completed atau Cancelled. Sementara itu pada sirkulasi perpustakaan, pengajuan pinjam berstatus Pending dapat disetujui menjadi Borrowed atau ditolak sebagai Rejected, dengan deteksi otomatis status Overdue beserta denda harian yang bertransisi dari Unpaid menjadi Paid, lalu diakhiri permohonan pemulangan buku yang wajib diverifikasi dan di-ACC oleh admin menuju status final Returned, didukung fitur percakapan bertemplate instan dengan status pesan Belum Dibalas dan Sudah Dibalas agar interaksi layanan pelanggan tetap transparan dan responsif.`,
+        tech: "Laravel, MySQL",
+        github: "https://github.com/zegow8/rainpedia.git",
+        demo: null,
+        images: ["assets/110.png", "assets/111.png", "assets/112.png"],
+        filter: "laravel"
+    },
+
+    // ====== PROYEK SEBELUMNYA ======
     {
         title: "Recyclefy",
         desc: `Recyclefy adalah platform pengelolaan sampah berbasis komunitas dengan sistem multi-user yang terdiri dari user, admin wilayah, dan super admin. Aplikasi dilengkapi dengan fitur autentikasi login dan registrasi berdasarkan role serta sistem tukar sampah jadi poin. User dapat menyetorkan sampah ke 3 wilayah (Kemayoran, Sumur Batu, Cempaka Putih) dan mendapatkan poin yang bisa ditukar dengan produk daur ulang.
@@ -42,8 +92,6 @@ Pada sisi pengguna (user), tersedia tampilan portofolio yang menampilkan data di
         images: ["assets/portopsila1.png", "assets/portopsila2.png", "assets/portopsila3.png"],
         filter: "phpnative"
     },
-
-    // ====== 7 PROYEK LAMA (ROMBAK) ======
     {
         title: "Raiental",
         desc: `Platform penyewaan website dan game berbasis web dengan sistem multi-user yang terdiri dari admin dan user. Aplikasi dilengkapi dengan fitur autentikasi login dan registrasi berdasarkan role serta sistem penyewaan digital dengan pilihan durasi per jam, hari, minggu, dan bulan.
@@ -141,8 +189,6 @@ Selain itu, seluruh transaksi yang telah dilakukan akan tersimpan pada halaman r
         images: null,
         filter: "htmlcssjs"
     },
-
-    // ====== 3 PROYEK ANDROID (TURUN KE BAWAH) ======
     {
         title: "Librify",
         desc: "Aplikasi peminjaman buku berbasis Android dengan dua role (Admin & User), dilengkapi fitur CRUD buku, upload cover, peminjaman buku, dan konfirmasi pengembalian menggunakan database SQLite.",
@@ -172,8 +218,17 @@ Selain itu, seluruh transaksi yang telah dilakukan akan tersimpan pada halaman r
     }
 ];
 
-// Data Design Gallery (8 Best Design)
+// ==========================================
+// DATA: DESIGN GALLERY (9 Best Design)
+// ==========================================
 const designs = [
+    {
+        title: "GoAnywhere",
+        desc: "UI Web Rental Mobil & Motor Jabodetabek (Proyek Tim)",
+        imgFile: "assets/113.png",
+        figmaUrl: "https://www.figma.com/design/msmIgLpX8zeBFUg210ACn7/GoAnywhere?node-id=0-1&p=f&t=OOMkEXnys58L7m2j-0",
+        filter: "desktop"
+    },
     {
         title: "Raiental",
         desc: "UI Web Penyewaan Game & Aplikasi Android",
@@ -232,9 +287,31 @@ const designs = [
     }
 ];
 
-// Data Games (6 Games)
+// ==========================================
+// DATA: GAMES (7 Games Total)
+// ==========================================
 const games = [
-    // ====== 1 GAME BARU (NAIK KE ATAS) ======
+    // ====== 1 GAME TERBARU (8 NOVEMBER 2026) ======
+    {
+        title: "RAIN PAIRS FINAL",
+        desc: `Rain Pairs adalah game memory matching berbasis web yang dikembangkan menggunakan GDevelop 5. Mengusung tema unik, game ini mengajak pemain untuk mengasah daya ingat dengan mencocokkan kartu bergambar logo-logo Artificial Intelligence populer (seperti ChatGPT, Gemini, Claude) serta tools pemrograman (seperti Python, Git, Java, dan Figma).
+Cara Bermain & Sistem Permainan:
+Pemain dituntut untuk mengingat posisi kartu dengan mengkliknya satu per satu. Jika dua kartu yang dibalik memiliki gambar yang sama, kartu akan hancur dan pemain mendapatkan poin. Namun, jika tidak cocok, kartu akan tertutup kembali dan pemain harus mengingat posisinya untuk kesempatan berikutnya. Permainan akan berakhir jika semua pasangan berhasil ditemukan sebelum waktu dan giliran habis.
+Untuk memberikan pengalaman bermain yang berlapis, game ini dirancang dengan 3 Tingkat Kesulitan yang berbeda:
+Level 1: 6 pasang kartu, dengan batas waktu 60 detik dan 20 giliran.
+Level 2: 8 pasang kartu, dengan batas waktu 90 detik dan 25 giliran.
+Level 3: 12 pasang kartu, dengan batas waktu 180 detik dan 30 giliran.
+Selain itu, terdapat Sistem Kombo di mana pemain bisa mendapatkan bonus skor hingga 5x lipat jika berhasil mencocokkan kartu secara beruntun. Sebaliknya, kesalahan akan mereset kombo dan mengurangi skor, menciptakan elemen tantangan dan risk-reward yang seru.
+Aspek Teknis & Fitur Tambahan:
+Dari sisi pengembangan, game ini dibangun dengan manajemen state (Finite State Machine) yang solid untuk mengatur transisi antar layar—mulai dari Home, How to Play, Gameplay, hingga layar kemenangan/kekalahan. Terdapat juga fitur Leaderboard dengan sistem input nama pemain, sehingga skor dari ketiga level akan diakumulasi dan tercatat di papan peringkat.
+Untuk memperkaya pengalaman pengguna, game ini memanfaatkan fitur animasi GDevelop seperti efek kartu berputar 3D (3D Flip), transisi fade, dan efek partikel bintang yang dipadukan dengan sound effects responsif. Game ini juga dioptimalkan sebagai build HTML5, sehingga dapat dimainkan langsung di browser (PC maupun mobile) tanpa perlu proses unduh tambahan.`,
+        tech: "GDevelop 5",
+        github: null,
+        demo: "https://zegow8.itch.io/rain-pairs-final",
+        img: "assets/102.png",
+        filter: "gdevelop"
+    },
+    // ====== 6 GAME SEBELUMNYA ======
     {
         title: "Rain Pairs Draft",
         desc: `rain pairs merupakan game memory card bertema teknologi yang dikembangkan sebagai permainan untuk menguji kemampuan pemain dalam mengingat posisi dan mencocokkan pasangan kartu. game ini menggunakan berbagai ikon dan nama teknologi seperti ai tools, bahasa pemrograman, serta software development sebagai elemen kartu.
@@ -256,7 +333,6 @@ fitur utama: timer, scoring, combo system, leaderboard, win/lose system, player 
         img: "assets/pai1.png",
         filter: "gdevelop"
     },
-    // ====== 5 GAME LAMA ======
     {
         title: "MEOWMORY GAME",
         desc: "Game memory match 4×4 dengan gambar kucing. Pemain harus mencocokkan 8 pasang kartu dalam waktu 60 detik. Setiap kartu menampilkan foto kucing yang unik, dan pemain ditantang untuk mengingat posisi setiap gambar. Fitur: timer 60 detik, hitungan langkah, high score tersimpan di localStorage, dan kontrol tap/klik yang responsif di desktop maupun HP.",
@@ -304,100 +380,259 @@ fitur utama: timer, scoring, combo system, leaderboard, win/lose system, player 
     }
 ];
 
-// Data Certifications
+// ==========================================
+// DATA: CERTIFICATIONS
+// ==========================================
 const certifications = [
     {
         title: "TECC (Test of English Communication Competency)",
         desc: "Score: 650 (setara TOEIC 650) – LCC Prediction, Agustus 2025",
         detail: "Listening: 360 | Reading: 290",
-        imgFile: "assets/TECC-Lyta.png"
+        imgFile: "assets/TECC-Lyta.png",
+        badge: "Score 650 / TOEIC Equivalent",
+        scores: [
+            { label: "Listening", val: 360, max: 495, pct: "72%" },
+            { label: "Reading", val: 290, max: 495, pct: "58%" }
+        ]
     },
     {
         title: "UKBI (Uji Kemahiran Berbahasa Indonesia)",
         desc: "Skor: 673 – Peringkat: Sangat Unggul",
         detail: "Mendengarkan: 605 | Merespons Kaidah: 704 | Membaca: 710",
-        imgFile: "assets/UKBI lyta.png"
+        imgFile: "assets/UKBI lyta.png",
+        badge: "Predikat: Sangat Unggul",
+        scores: [
+            { label: "Mendengarkan", val: 605, max: 800, pct: "75%" },
+            { label: "Merespons Kaidah", val: 704, max: 800, pct: "88%" },
+            { label: "Membaca", val: 710, max: 800, pct: "89%" }
+        ]
     }
 ];
 
-// ============ RENDER PROJECTS ============
-function renderProjects(filter = 'all') {
+// ==========================================
+// STATE VARIABLES
+// ==========================================
+let currentProjectFilter = 'all';
+let currentSearchQuery = '';
+
+// ==========================================
+// DYNAMIC GITHUB REPO FETCHER
+// ==========================================
+async function fetchLiveGitHubRepoCount() {
+    try {
+        const response = await fetch('https://api.github.com/users/zegow8');
+        if (response.ok) {
+            const data = await response.json();
+            if (data && typeof data.public_repos === 'number') {
+                const count = data.public_repos;
+                
+                // Update hero stats counter
+                const statEl = document.getElementById('github-repo-count');
+                if (statEl) {
+                    statEl.dataset.target = count;
+                    statEl.textContent = count;
+                }
+
+                // Update contact card badge
+                const pillEl = document.getElementById('contact-repo-pill');
+                if (pillEl) {
+                    const numEl = pillEl.querySelector('.repo-num');
+                    if (numEl) numEl.textContent = count;
+                    else pillEl.innerHTML = `<i class="fas fa-code-branch"></i> ${count} Repos`;
+                }
+            }
+        }
+    } catch (e) {
+        // Fallback gracefully to default
+    }
+}
+
+// ==========================================
+// HELPER: TECH TAGS GENERATOR
+// ==========================================
+function renderTechTags(techString) {
+    if (!techString) return '';
+    const items = techString.split(',').map(s => s.trim());
+    return items.map(item => {
+        let icon = 'fas fa-code';
+        const lower = item.toLowerCase();
+        if (lower.includes('react') || lower.includes('next')) icon = 'fab fa-react';
+        else if (lower.includes('laravel')) icon = 'fab fa-laravel';
+        else if (lower.includes('php')) icon = 'fab fa-php';
+        else if (lower.includes('html')) icon = 'fab fa-html5';
+        else if (lower.includes('css') || lower.includes('tailwind')) icon = 'fab fa-css3-alt';
+        else if (lower.includes('javascript') || lower.includes('js')) icon = 'fab fa-js';
+        else if (lower.includes('android')) icon = 'fab fa-android';
+        else if (lower.includes('java')) icon = 'fab fa-java';
+        else if (lower.includes('postgres') || lower.includes('mysql') || lower.includes('sqlite') || lower.includes('database')) icon = 'fas fa-database';
+        else if (lower.includes('firebase')) icon = 'fas fa-fire';
+        else if (lower.includes('bootstrap')) icon = 'fab fa-bootstrap';
+        else if (lower.includes('prisma')) icon = 'fas fa-gem';
+        else if (lower.includes('gdevelop') || lower.includes('unity')) icon = 'fas fa-gamepad';
+
+        return `<span class="tech-pill"><i class="${icon}"></i> ${item}</span>`;
+    }).join('');
+}
+
+// ==========================================
+// RENDER: PROJECTS
+// ==========================================
+function renderProjects() {
     const container = document.getElementById('projects-grid');
+    const countLabel = document.getElementById('project-visible-count');
     if (!container) return;
 
-    const filtered = filter === 'all' ? projects : projects.filter(p => p.filter === filter);
+    let filtered = projects.filter(p => {
+        const matchesCategory = currentProjectFilter === 'all' || p.filter === currentProjectFilter;
+        const query = currentSearchQuery.toLowerCase().trim();
+        if (!query) return matchesCategory;
+
+        const matchesQuery = p.title.toLowerCase().includes(query) ||
+                             p.desc.toLowerCase().includes(query) ||
+                             p.tech.toLowerCase().includes(query);
+        return matchesCategory && matchesQuery;
+    });
+
+    if (countLabel) {
+        countLabel.textContent = filtered.length;
+    }
+
+    if (filtered.length === 0) {
+        container.innerHTML = `
+            <div class="empty-state">
+                <div class="empty-icon"><i class="fas fa-search-minus"></i></div>
+                <h3>Tidak ada proyek yang sesuai</h3>
+                <p>Coba kata kunci pencarian lain atau pilih filter kategori yang berbeda.</p>
+                <button class="btn btn-secondary" onclick="resetProjectFilters()">
+                    <i class="fas fa-redo"></i> Reset Filter
+                </button>
+            </div>
+        `;
+        return;
+    }
 
     container.innerHTML = filtered.map((project, index) => {
-        let imageHtml = '';
+        let mediaHtml = '';
         if (project.images && project.images.length > 0) {
             if (project.images.length === 1) {
-                imageHtml = `<img src="${project.images[0]}" alt="${project.title}" class="single-img" onclick="openLightbox(this.src)">`;
+                mediaHtml = `
+                    <div class="card-media-wrapper single-media">
+                        <img src="${project.images[0]}" alt="${project.title}" class="project-img single-img" onclick="openLightbox('${project.images[0]}', '${project.title}')" loading="lazy">
+                        <div class="media-hover-overlay" onclick="openLightbox('${project.images[0]}', '${project.title}')">
+                            <span class="zoom-badge"><i class="fas fa-search-plus"></i> Perbesar</span>
+                        </div>
+                    </div>
+                `;
             } else {
-                let slidesHtml = project.images.map((img, i) => {
-                    return `<img src="${img}" alt="${project.title}" class="slide-img ${i === 0 ? 'active' : ''}" data-index="${i}" onclick="openLightbox(this.src)">`;
-                }).join('');
-                
-                let dotsHtml = project.images.map((_, i) => {
-                    return `<span class="${i === 0 ? 'active' : ''}" data-index="${i}"></span>`;
-                }).join('');
-                
-                imageHtml = `
-                    <div class="slideshow-container" data-project="${index}">
+                let slidesHtml = project.images.map((img, i) => `
+                    <img src="${img}" alt="${project.title} - Screenshot ${i + 1}" class="slide-img ${i === 0 ? 'active' : ''}" data-index="${i}" onclick="openLightbox('${img}', '${project.title} (${i+1}/${project.images.length})')" loading="lazy">
+                `).join('');
+
+                let dotsHtml = project.images.map((_, i) => `
+                    <span class="dot ${i === 0 ? 'active' : ''}" data-index="${i}" title="Slide ${i + 1}"></span>
+                `).join('');
+
+                mediaHtml = `
+                    <div class="card-media-wrapper slideshow-container" data-project="${index}">
                         ${slidesHtml}
-                        <button class="slideshow-btn prev" data-project="${index}">‹</button>
-                        <button class="slideshow-btn next" data-project="${index}">›</button>
+                        <button class="slideshow-btn prev" data-project="${index}" aria-label="Slide sebelumnya"><i class="fas fa-chevron-left"></i></button>
+                        <button class="slideshow-btn next" data-project="${index}" aria-label="Slide berikutnya"><i class="fas fa-chevron-right"></i></button>
+                        <div class="slideshow-counter">1 / ${project.images.length}</div>
                         <div class="slideshow-dots">${dotsHtml}</div>
                     </div>
                 `;
             }
+        } else {
+            mediaHtml = `
+                <div class="card-media-wrapper placeholder-media">
+                    <div class="placeholder-content">
+                        <i class="fas fa-laptop-code"></i>
+                        <span>${project.title}</span>
+                    </div>
+                </div>
+            `;
         }
 
-        const demoLink = project.demo ? `<a href="${project.demo}" target="_blank"><i class="fas fa-external-link-alt"></i></a>` : '';
-
-        const shortDesc = project.desc.length > 120 ? project.desc.substring(0, 120) + '...' : project.desc;
         const isLong = project.desc.length > 120;
+        const shortDesc = isLong ? project.desc.substring(0, 120).trim() + '...' : project.desc;
+        const formattedFullDesc = project.desc.split('\n\n').map(p => `<p>${p.trim()}</p>`).join('');
+
+        const demoLink = project.demo 
+            ? `<a href="${project.demo}" target="_blank" class="card-link demo-link" title="Buka Live Demo"><i class="fas fa-external-link-alt"></i> <span>Live Demo</span></a>`
+            : '';
+
+        const githubLink = project.github 
+            ? `<a href="${project.github}" target="_blank" class="card-link github-link" title="Lihat Source Code di GitHub"><i class="fab fa-github"></i> <span>GitHub</span></a>`
+            : '';
 
         return `
-            <div class="project-card hidden-item delay-${(index % 13) + 1}">
-                <h3 class="project-title">${project.title}</h3>
-                ${imageHtml}
+            <article class="project-card modern-card" data-index="${index}">
+                <div class="card-header-bar">
+                    <span class="card-category-badge">${project.filter.toUpperCase()}</span>
+                    <h3 class="project-title">${project.title}</h3>
+                </div>
+
+                ${mediaHtml}
+
                 <div class="project-desc" id="desc-${index}">
                     <span class="short-desc">${shortDesc}</span>
-                    ${isLong ? `<span class="full-desc">${project.desc}</span>` : ''}
+                    ${isLong ? `<span class="full-desc">${formattedFullDesc}</span>` : ''}
                 </div>
-                ${isLong ? `<button class="read-more-btn" onclick="toggleDesc(${index})">Selengkapnya →</button>` : ''}
-                <p class="project-tech"><i class="fas fa-code"></i> ${project.tech}</p>
-                <div class="project-links">
-                    <a href="${project.github}" target="_blank"><i class="fab fa-github"></i></a>
+
+                ${isLong ? `
+                    <button class="read-more-btn" onclick="toggleDesc(${index})">Selengkapnya →</button>
+                ` : ''}
+
+                <div class="project-tech-stack">
+                    ${renderTechTags(project.tech)}
+                </div>
+
+                <div class="card-actions">
+                    ${githubLink}
                     ${demoLink}
                 </div>
-            </div>
+            </article>
         `;
     }).join('');
 
-    // Setup slideshow events
+    setupProjectSlideshows();
+    attachCardTiltEffect();
+}
+
+function resetProjectFilters() {
+    currentProjectFilter = 'all';
+    currentSearchQuery = '';
+    const searchInput = document.getElementById('project-search');
+    if (searchInput) searchInput.value = '';
+    const filterBtns = document.querySelectorAll('#project-filters .filter-btn');
+    filterBtns.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.filter === 'all');
+    });
+    renderProjects();
+}
+
+// Setup project slideshow controls & swipe support
+function setupProjectSlideshows() {
     document.querySelectorAll('.slideshow-container').forEach(container => {
-        const projectIndex = parseInt(container.dataset.project);
         const images = container.querySelectorAll('.slide-img');
         const dots = container.querySelectorAll('.slideshow-dots span');
+        const counter = container.querySelector('.slideshow-counter');
         const prevBtn = container.querySelector('.slideshow-btn.prev');
         const nextBtn = container.querySelector('.slideshow-btn.next');
         let currentIndex = 0;
+        const total = images.length;
 
         function showSlide(index) {
-            images.forEach((img, i) => {
-                img.classList.toggle('active', i === index);
-            });
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === index);
-            });
+            images.forEach((img, i) => img.classList.toggle('active', i === index));
+            dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+            if (counter) counter.textContent = `${index + 1} / ${total}`;
             currentIndex = index;
         }
 
         if (prevBtn) {
             prevBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
-                const newIndex = (currentIndex - 1 + images.length) % images.length;
+                const newIndex = (currentIndex - 1 + total) % total;
                 showSlide(newIndex);
             });
         }
@@ -405,7 +640,7 @@ function renderProjects(filter = 'all') {
         if (nextBtn) {
             nextBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
-                const newIndex = (currentIndex + 1) % images.length;
+                const newIndex = (currentIndex + 1) % total;
                 showSlide(newIndex);
             });
         }
@@ -416,72 +651,206 @@ function renderProjects(filter = 'all') {
                 showSlide(i);
             });
         });
-    });
 
-    setTimeout(() => {
-        document.querySelectorAll('.project-card').forEach(el => {
-            el.classList.add('show-item');
-        });
-    }, 50);
+        // Touch swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+        container.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        container.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            if (touchStartX - touchEndX > 40) {
+                showSlide((currentIndex + 1) % total);
+            } else if (touchEndX - touchStartX > 40) {
+                showSlide((currentIndex - 1 + total) % total);
+            }
+        }, { passive: true });
+    });
 }
 
-// Toggle deskripsi (expand/collapse)
+// =========================================================================
+// PAIRED EXPAND/COLLAPSE LOGIC (DESKTOP: ROW PAIRS, MOBILE: INDEPENDENT)
+// =========================================================================
+
+// 1. Projects: toggleDesc
 function toggleDesc(index) {
-    const descs = document.querySelectorAll('.project-desc');
     const isDesktop = window.innerWidth > 768;
-    
+    const cards = document.querySelectorAll('#projects-grid .project-card');
+    if (!cards.length) return;
+
     if (isDesktop) {
         const pairStart = Math.floor(index / 2) * 2;
         const pairEnd = pairStart + 1;
-        
+
+        const clickedCard = cards[index];
+        const clickedDesc = clickedCard ? clickedCard.querySelector('.project-desc') : null;
+        const willExpand = clickedDesc ? !clickedDesc.classList.contains('expanded') : true;
+
         [pairStart, pairEnd].forEach(i => {
-            if (descs[i]) {
-                descs[i].classList.toggle('expanded');
-                const btn = descs[i].parentElement.querySelector('.read-more-btn');
+            if (cards[i]) {
+                const desc = cards[i].querySelector('.project-desc');
+                const btn = cards[i].querySelector('.read-more-btn');
+                if (desc) {
+                    desc.classList.toggle('expanded', willExpand);
+                }
                 if (btn) {
-                    btn.textContent = descs[i].classList.contains('expanded') ? 'Tutup ↑' : 'Selengkapnya →';
+                    btn.textContent = willExpand ? 'Tutup ↑' : 'Selengkapnya →';
                 }
             }
         });
     } else {
-        if (descs[index]) {
-            descs[index].classList.toggle('expanded');
-            const btn = descs[index].parentElement.querySelector('.read-more-btn');
-            if (btn) {
-                btn.textContent = descs[index].classList.contains('expanded') ? 'Tutup ↑' : 'Selengkapnya →';
+        if (cards[index]) {
+            const desc = cards[index].querySelector('.project-desc');
+            const btn = cards[index].querySelector('.read-more-btn');
+            if (desc) {
+                const willExpand = !desc.classList.contains('expanded');
+                desc.classList.toggle('expanded', willExpand);
+                if (btn) {
+                    btn.textContent = willExpand ? 'Tutup ↑' : 'Selengkapnya →';
+                }
             }
         }
     }
 }
 
-// ============ RENDER DESIGN ============
+// 2. Games: toggleGameDesc
+function toggleGameDesc(index) {
+    const isDesktop = window.innerWidth > 768;
+    const cards = document.querySelectorAll('#games-grid .game-card');
+    if (!cards.length) return;
+
+    if (isDesktop) {
+        const pairStart = Math.floor(index / 2) * 2;
+        const pairEnd = pairStart + 1;
+
+        const clickedCard = cards[index];
+        const clickedDesc = clickedCard ? clickedCard.querySelector('.game-desc') : null;
+        const willExpand = clickedDesc ? !clickedDesc.classList.contains('expanded') : true;
+
+        [pairStart, pairEnd].forEach(i => {
+            if (cards[i]) {
+                const desc = cards[i].querySelector('.game-desc');
+                const btn = cards[i].querySelector('.read-more-btn');
+                if (desc) {
+                    desc.classList.toggle('expanded', willExpand);
+                }
+                if (btn) {
+                    btn.textContent = willExpand ? 'Tutup ↑' : 'Selengkapnya →';
+                }
+            }
+        });
+    } else {
+        if (cards[index]) {
+            const desc = cards[index].querySelector('.game-desc');
+            const btn = cards[index].querySelector('.read-more-btn');
+            if (desc) {
+                const willExpand = !desc.classList.contains('expanded');
+                desc.classList.toggle('expanded', willExpand);
+                if (btn) {
+                    btn.textContent = willExpand ? 'Tutup ↑' : 'Selengkapnya →';
+                }
+            }
+        }
+    }
+}
+
+// 3. Design: toggleDesignDesc
+function toggleDesignDesc(index) {
+    const isDesktop = window.innerWidth > 768;
+    const cards = document.querySelectorAll('#design-grid .design-card');
+    if (!cards.length) return;
+
+    if (isDesktop) {
+        const pairStart = Math.floor(index / 2) * 2;
+        const pairEnd = pairStart + 1;
+
+        const clickedCard = cards[index];
+        const clickedDesc = clickedCard ? clickedCard.querySelector('.design-desc') : null;
+        const willExpand = clickedDesc ? !clickedDesc.classList.contains('expanded') : true;
+
+        [pairStart, pairEnd].forEach(i => {
+            if (cards[i]) {
+                const desc = cards[i].querySelector('.design-desc');
+                const btn = cards[i].querySelector('.read-more-btn');
+                if (desc) {
+                    desc.classList.toggle('expanded', willExpand);
+                }
+                if (btn) {
+                    btn.textContent = willExpand ? 'Tutup ↑' : 'Selengkapnya →';
+                }
+            }
+        });
+    } else {
+        if (cards[index]) {
+            const desc = cards[index].querySelector('.design-desc');
+            const btn = cards[index].querySelector('.read-more-btn');
+            if (desc) {
+                const willExpand = !desc.classList.contains('expanded');
+                desc.classList.toggle('expanded', willExpand);
+                if (btn) {
+                    btn.textContent = willExpand ? 'Tutup ↑' : 'Selengkapnya →';
+                }
+            }
+        }
+    }
+}
+
+// Global functions for onclick handlers
+window.toggleDesc = toggleDesc;
+window.toggleProjectDesc = toggleDesc;
+window.toggleGameDesc = toggleGameDesc;
+window.toggleDesignDesc = toggleDesignDesc;
+
+// ==========================================
+// RENDER: DESIGN GALLERY (9 Designs)
+// ==========================================
 function renderDesigns(filter = 'all') {
     const container = document.getElementById('design-grid');
     if (!container) return;
 
     const filtered = filter === 'all' ? designs : designs.filter(d => d.filter === filter);
 
-    container.innerHTML = filtered.map((design, index) => `
-        <div class="design-card hidden-item delay-${(index % 8) + 1}">
-            <img src="${design.imgFile}" alt="${design.title}" class="design-img" onclick="openLightbox(this.src)">
-            <div class="design-info">
-                <h3 class="design-title">${design.title}</h3>
-                <p class="design-desc">${design.desc}</p>
-                <a href="${design.figmaUrl}" target="_blank" class="figma-link">
-                    <i class="fab fa-figma"></i> Lihat di Figma
-                </a>
-            </div>
-        </div>
-    `).join('');
+    container.innerHTML = filtered.map((design, index) => {
+        const isLong = design.desc.length > 120;
+        const shortDesc = isLong ? design.desc.substring(0, 120).trim() + '...' : design.desc;
 
-    setTimeout(() => {
-        document.querySelectorAll('.design-card').forEach(el => {
-            el.classList.add('show-item');
-        });
-    }, 50);
+        return `
+            <article class="design-card modern-card" data-index="${index}">
+                <div class="design-image-frame" onclick="openLightbox('${design.imgFile}', '${design.title} - ${design.desc}')">
+                    <img src="${design.imgFile}" alt="${design.title}" class="design-img" loading="lazy">
+                    <div class="design-overlay">
+                        <span class="preview-badge"><i class="fas fa-search-plus"></i> Lihat Desain</span>
+                    </div>
+                    <span class="platform-badge">${design.filter.toUpperCase()}</span>
+                </div>
+                <div class="design-info">
+                    <h3 class="design-title">${design.title}</h3>
+                    <div class="design-desc" id="design-desc-${index}">
+                        <span class="short-desc">${shortDesc}</span>
+                        ${isLong ? `<span class="full-desc">${design.desc}</span>` : ''}
+                    </div>
+                    ${isLong ? `
+                        <button class="read-more-btn" onclick="toggleDesignDesc(${index})">Selengkapnya →</button>
+                    ` : ''}
+                    <div class="design-actions">
+                        <a href="${design.figmaUrl}" target="_blank" class="figma-btn">
+                            <i class="fab fa-figma"></i> <span>Lihat di Figma</span>
+                            <i class="fas fa-arrow-right arrow-icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        `;
+    }).join('');
+
+    attachCardTiltEffect();
 }
 
-// ============ RENDER GAMES ============
+// ==========================================
+// RENDER: GAMES (7 Games)
+// ==========================================
 function renderGames(filter = 'all') {
     const container = document.getElementById('games-grid');
     if (!container) return;
@@ -489,256 +858,672 @@ function renderGames(filter = 'all') {
     const filtered = filter === 'all' ? games : games.filter(g => g.filter === filter);
 
     container.innerHTML = filtered.map((game, index) => {
-        const shortDesc = game.desc.length > 120 ? game.desc.substring(0, 120) + '...' : game.desc;
         const isLong = game.desc.length > 120;
-        const githubLink = game.github ? `<a href="${game.github}" target="_blank"><i class="fab fa-github"></i></a>` : '';
+        const shortDesc = isLong ? game.desc.substring(0, 120).trim() + '...' : game.desc;
+        const formattedFullDesc = game.desc.split('\n\n').map(p => `<p>${p.trim()}</p>`).join('');
+
+        const githubLink = game.github 
+            ? `<a href="${game.github}" target="_blank" class="card-link github-link"><i class="fab fa-github"></i> <span>GitHub</span></a>` 
+            : '';
+        const demoLink = game.demo 
+            ? `<a href="${game.demo}" target="_blank" class="card-link demo-link"><i class="fas fa-play"></i> <span>Mainkan Demo</span></a>` 
+            : '';
 
         return `
-            <div class="game-card hidden-item delay-${(index % 5) + 1}">
-                <h3 class="game-title">${game.title}</h3>
-                <img src="${game.img}" alt="${game.title}" class="game-img" onclick="openLightbox(this.src)">
+            <article class="game-card modern-card" data-index="${index}">
+                <div class="card-header-bar">
+                    <span class="card-category-badge"><i class="fas fa-gamepad"></i> GAME</span>
+                    <h3 class="game-title">${game.title}</h3>
+                </div>
+
+                <div class="card-media-wrapper single-media" onclick="openLightbox('${game.img}', '${game.title}')">
+                    <img src="${game.img}" alt="${game.title}" class="game-img" loading="lazy">
+                    <div class="media-hover-overlay">
+                        <span class="zoom-badge"><i class="fas fa-search-plus"></i> Perbesar</span>
+                    </div>
+                </div>
+
                 <div class="game-desc" id="game-desc-${index}">
                     <span class="short-desc">${shortDesc}</span>
-                    ${isLong ? `<span class="full-desc">${game.desc}</span>` : ''}
+                    ${isLong ? `<span class="full-desc">${formattedFullDesc}</span>` : ''}
                 </div>
-                ${isLong ? `<button class="read-more-btn" onclick="toggleGameDesc(${index})">Selengkapnya →</button>` : ''}
-                <p class="game-tech"><i class="fas fa-code"></i> ${game.tech}</p>
-                <div class="game-links">
+
+                ${isLong ? `
+                    <button class="read-more-btn" onclick="toggleGameDesc(${index})">Selengkapnya →</button>
+                ` : ''}
+
+                <div class="project-tech-stack">
+                    ${renderTechTags(game.tech)}
+                </div>
+
+                <div class="card-actions">
                     ${githubLink}
-                    <a href="${game.demo}" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                    ${demoLink}
                 </div>
-            </div>
+            </article>
         `;
     }).join('');
 
-    setTimeout(() => {
-        document.querySelectorAll('.game-card').forEach(el => {
-            el.classList.add('show-item');
-        });
-    }, 50);
+    attachCardTiltEffect();
 }
 
-// Toggle deskripsi game
-function toggleGameDesc(index) {
-    const descs = document.querySelectorAll('.game-desc');
-    const isDesktop = window.innerWidth > 768;
-    
-    if (isDesktop) {
-        const pairStart = Math.floor(index / 2) * 2;
-        const pairEnd = pairStart + 1;
-        
-        [pairStart, pairEnd].forEach(i => {
-            if (descs[i]) {
-                descs[i].classList.toggle('expanded');
-                const btn = descs[i].parentElement.querySelector('.read-more-btn');
-                if (btn) {
-                    btn.textContent = descs[i].classList.contains('expanded') ? 'Tutup ↑' : 'Selengkapnya →';
-                }
-            }
-        });
-    } else {
-        if (descs[index]) {
-            descs[index].classList.toggle('expanded');
-            const btn = descs[index].parentElement.querySelector('.read-more-btn');
-            if (btn) {
-                btn.textContent = descs[index].classList.contains('expanded') ? 'Tutup ↑' : 'Selengkapnya →';
-            }
-        }
-    }
-}
-
-// ============ RENDER CERTIFICATIONS ============
+// ==========================================
+// RENDER: CERTIFICATIONS
+// ==========================================
 function renderCertifications() {
     const container = document.getElementById('cert-grid');
     if (!container) return;
 
-    container.innerHTML = certifications.map((cert, index) => `
-        <div class="cert-card hidden-item delay-${(index % 2) + 1}">
-            <img src="${cert.imgFile}" alt="${cert.title}" class="cert-img" onclick="openLightbox(this.src)">
-            <div class="cert-info">
-                <h3 class="cert-title">${cert.title}</h3>
-                <p class="cert-desc">${cert.desc}</p>
-                <p class="cert-detail">${cert.detail}</p>
+    container.innerHTML = certifications.map((cert, index) => {
+        const scoresHtml = cert.scores ? cert.scores.map(s => `
+            <div class="cert-score-item">
+                <div class="score-header">
+                    <span class="score-label">${s.label}</span>
+                    <span class="score-val">${s.val} / ${s.max}</span>
+                </div>
+                <div class="score-bar">
+                    <div class="score-bar-fill" style="width: ${s.pct}"></div>
+                </div>
             </div>
-        </div>
-    `).join('');
+        `).join('') : '';
 
-    setTimeout(() => {
-        document.querySelectorAll('.cert-card').forEach(el => {
-            el.classList.add('show-item');
-        });
-    }, 50);
+        return `
+            <article class="cert-card modern-card" data-index="${index}">
+                <div class="cert-media-frame" onclick="openLightbox('${cert.imgFile}', '${cert.title}')">
+                    <img src="${cert.imgFile}" alt="${cert.title}" class="cert-img" loading="lazy">
+                    <div class="cert-overlay">
+                        <span class="zoom-badge"><i class="fas fa-search-plus"></i> Lihat Sertifikat Resmi</span>
+                    </div>
+                    <span class="cert-ribbon"><i class="fas fa-certificate"></i> Verified</span>
+                </div>
+                <div class="cert-info">
+                    <div class="cert-badge-pill">${cert.badge}</div>
+                    <h3 class="cert-title">${cert.title}</h3>
+                    <p class="cert-desc">${cert.desc}</p>
+                    <p class="cert-detail"><i class="fas fa-chart-pie"></i> ${cert.detail}</p>
+                    <div class="cert-score-bars">
+                        ${scoresHtml}
+                    </div>
+                </div>
+            </article>
+        `;
+    }).join('');
+
+    attachCardTiltEffect();
 }
 
-// ============ FILTER FUNCTIONS ============
+// ==========================================
+// 3D CARD TILT MICRO-INTERACTION (DESKTOP)
+// ==========================================
+function attachCardTiltEffect() {
+    if (window.innerWidth < 992) return;
+    const cards = document.querySelectorAll('.modern-card');
+
+    cards.forEach(card => {
+        if (card.dataset.tiltAttached) return;
+        card.dataset.tiltAttached = 'true';
+
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = ((y - centerY) / centerY) * -4;
+            const rotateY = ((x - centerX) / centerX) * 4;
+
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+        });
+    });
+}
+
+// ==========================================
+// FILTERS SETUP (PROJECTS, DESIGNS, GAMES)
+// ==========================================
 function setupFilters() {
-    // Projects filter
-    const projectFilterBtns = document.querySelectorAll('#projects .filter-btn');
+    // Projects Filter Buttons
+    const projectFilterBtns = document.querySelectorAll('#project-filters .filter-btn');
     projectFilterBtns.forEach(btn => {
         btn.addEventListener('click', function() {
             projectFilterBtns.forEach(b => b.classList.remove('active'));
             this.classList.add('active');
-            const filter = this.dataset.filter;
-            renderProjects(filter);
+            currentProjectFilter = this.dataset.filter;
+            renderProjects();
         });
     });
 
-    // Design filter
-    const designFilterBtns = document.querySelectorAll('#design .filter-btn');
+    // Project Search Input
+    const searchInput = document.getElementById('project-search');
+    const clearBtn = document.getElementById('clear-search');
+
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            currentSearchQuery = e.target.value;
+            if (clearBtn) {
+                clearBtn.style.display = currentSearchQuery.length > 0 ? 'flex' : 'none';
+            }
+            renderProjects();
+        });
+    }
+
+    if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+            if (searchInput) searchInput.value = '';
+            currentSearchQuery = '';
+            clearBtn.style.display = 'none';
+            renderProjects();
+            if (searchInput) searchInput.focus();
+        });
+    }
+
+    // Design Filter Buttons
+    const designFilterBtns = document.querySelectorAll('#design-filters .filter-btn');
     designFilterBtns.forEach(btn => {
         btn.addEventListener('click', function() {
             designFilterBtns.forEach(b => b.classList.remove('active'));
             this.classList.add('active');
-            const filter = this.dataset.filter;
-            renderDesigns(filter);
+            renderDesigns(this.dataset.filter);
         });
     });
 
-    // Games filter
-    const gamesFilterBtns = document.querySelectorAll('#games .filter-btn');
+    // Games Filter Buttons
+    const gamesFilterBtns = document.querySelectorAll('#games-filters .filter-btn');
     gamesFilterBtns.forEach(btn => {
         btn.addEventListener('click', function() {
             gamesFilterBtns.forEach(b => b.classList.remove('active'));
             this.classList.add('active');
-            const filter = this.dataset.filter;
-            renderGames(filter);
+            renderGames(this.dataset.filter);
         });
     });
 }
 
-// ============ ANIMASI SCROLL (INTERSECTION OBSERVER) ============
-function setupScrollAnimation() {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
-                const items = entry.target.querySelectorAll('.hidden-item');
-                items.forEach((item, index) => {
-                    setTimeout(() => {
-                        item.classList.add('show-item');
-                    }, 100 + (index * 80));
-                });
-            }
-        });
-    }, {
-        threshold: 0.15,
-        rootMargin: '0px 0px -50px 0px'
-    });
-
-    document.querySelectorAll('.section .content').forEach(content => {
-        content.classList.add('hidden');
-        observer.observe(content);
-    });
-}
-
-// ============ LIGHTBOX ============
-function openLightbox(imgSrc) {
+// ==========================================
+// LIGHTBOX MODAL
+// ==========================================
+function openLightbox(imgSrc, caption = '') {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
-    lightbox.style.display = 'flex';
+    const lightboxCaption = document.getElementById('lightbox-caption');
+
+    if (!lightbox || !lightboxImg) return;
+
     lightboxImg.src = imgSrc;
+    if (lightboxCaption) {
+        lightboxCaption.textContent = caption;
+        lightboxCaption.style.display = caption ? 'block' : 'none';
+    }
+
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
 }
 
 function closeLightbox() {
     const lightbox = document.getElementById('lightbox');
-    lightbox.style.display = 'none';
+    if (!lightbox) return;
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
 }
 
-// ============ NAVBAR ============
-function updateActiveLink() {
-    const sections = document.querySelectorAll('.section');
-    const navLinks = document.querySelectorAll('.nav-link');
-    
-    let current = '';
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.clientHeight;
-        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-            current = section.getAttribute('id');
-        }
-    });
-    
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        const href = link.getAttribute('href').substring(1);
-        if (href === current) {
-            link.classList.add('active');
-        }
-    });
+// ==========================================
+// TOAST NOTIFICATION SYSTEM
+// ==========================================
+function showToast(message, icon = 'fas fa-check-circle') {
+    const container = document.getElementById('toast-container');
+    if (!container) return;
+
+    const toast = document.createElement('div');
+    toast.className = 'toast-message';
+    toast.innerHTML = `<i class="${icon}"></i> <span>${message}</span>`;
+    container.appendChild(toast);
+
+    setTimeout(() => {
+        toast.classList.add('show');
+    }, 10);
+
+    setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => toast.remove(), 400);
+    }, 3200);
 }
 
-function setupNavbar() {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
+// Copy to clipboard helper
+function copyToClipboard(text, successMsg = 'Tersalin ke clipboard!') {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+            showToast(successMsg, 'fas fa-copy');
+        }).catch(() => {
+            fallbackCopy(text, successMsg);
         });
-        
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
+    } else {
+        fallbackCopy(text, successMsg);
+    }
+}
+
+function fallbackCopy(text, successMsg) {
+    const tempInput = document.createElement('input');
+    tempInput.value = text;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    try {
+        document.execCommand('copy');
+        showToast(successMsg, 'fas fa-copy');
+    } catch (e) {
+        showToast('Gagal menyalin secara otomatis', 'fas fa-exclamation-circle');
+    }
+    document.body.removeChild(tempInput);
+}
+
+// ==========================================
+// TYPEWRITER EFFECT IN HERO
+// ==========================================
+function setupTypewriter() {
+    const element = document.getElementById('typewriter-text');
+    if (!element) return;
+
+    const phrases = [
+        "Full Stack Developer & UI/UX Enthusiast.",
+        "Siswa Rekayasa Perangkat Lunak (Kelas 12).",
+        "Web & Android App Creator.",
+        "Crafting Fast, Functional & Aesthetic Systems."
+    ];
+
+    let phraseIndex = 0;
+    let charIndex = phrases[0].length;
+    let isDeleting = true;
+    let speed = 60;
+
+    function tick() {
+        const current = phrases[phraseIndex];
+
+        if (isDeleting) {
+            charIndex--;
+            element.textContent = current.substring(0, charIndex);
+            speed = 30;
+        } else {
+            charIndex++;
+            element.textContent = current.substring(0, charIndex);
+            speed = 65;
+        }
+
+        if (!isDeleting && charIndex === current.length) {
+            isDeleting = true;
+            speed = 2200;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            speed = 450;
+        }
+
+        setTimeout(tick, speed);
+    }
+
+    setTimeout(tick, 2000);
+}
+
+// ==========================================
+// THEME SWITCHER (DARK / LIGHT)
+// ==========================================
+function setupTheme() {
+    const toggleBtn = document.getElementById('theme-toggle');
+    const savedTheme = localStorage.getItem('earlyta_theme') || 'dark';
+
+    document.documentElement.setAttribute('data-theme', savedTheme);
+
+    if (toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+            const current = document.documentElement.getAttribute('data-theme');
+            const target = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', target);
+            localStorage.setItem('earlyta_theme', target);
+
+            showToast(target === 'dark' ? 'Mode Gelap Aktif 🌙' : 'Mode Terang Aktif ☀️', 'fas fa-palette');
+        });
+    }
+}
+
+// ==========================================
+// SCROLL PROGRESS & BACK TO TOP
+// ==========================================
+function setupScrollIndicators() {
+    const progressBar = document.getElementById('scroll-progress');
+    const backToTop = document.getElementById('back-to-top');
+    const progressCircle = document.getElementById('progress-circle');
+    const circumference = 2 * Math.PI * 20;
+
+    if (progressCircle) {
+        progressCircle.style.strokeDasharray = `${circumference} ${circumference}`;
+        progressCircle.style.strokeDashoffset = circumference;
+    }
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) : 0;
+
+        if (progressBar) {
+            progressBar.style.width = `${progress * 100}%`;
+        }
+
+        if (progressCircle) {
+            const offset = circumference - (progress * circumference);
+            progressCircle.style.strokeDashoffset = offset;
+        }
+
+        if (backToTop) {
+            if (scrollTop > 350) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        }
+    }, { passive: true });
+
+    if (backToTop) {
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
             });
         });
     }
 }
 
-function setupSmoothScroll() {
-    document.querySelectorAll('.nav-link').forEach(link => {
+// ==========================================
+// NAVBAR & ACTIVE SECTION HIGHLIGHT
+// ==========================================
+function setupNavbar() {
+    const navbar = document.getElementById('navbar');
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 40) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    }, { passive: true });
+
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            document.body.classList.toggle('menu-open', navMenu.classList.contains('active'));
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            });
+        });
+    }
+
+    navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
             const targetId = link.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+            if (targetId && targetId.startsWith('#')) {
+                e.preventDefault();
+                const targetEl = document.querySelector(targetId);
+                if (targetEl) {
+                    const navHeight = navbar ? navbar.offsetHeight : 70;
+                    const targetPos = targetEl.getBoundingClientRect().top + window.pageYOffset - (navHeight + 10);
+                    window.scrollTo({
+                        top: targetPos,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
+
+    const sections = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+        const scrollY = window.pageYOffset;
+        sections.forEach(current => {
+            const sectionHeight = current.offsetHeight;
+            const sectionTop = current.offsetTop - 120;
+            const sectionId = current.getAttribute('id');
+            const matchingLink = document.querySelector(`.nav-menu a[href*="${sectionId}"]`);
+
+            if (matchingLink) {
+                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                    matchingLink.classList.add('active');
+                } else {
+                    matchingLink.classList.remove('active');
+                }
+            }
+        });
+    }, { passive: true });
+}
+
+// ==========================================
+// STATS COUNTER ANIMATION
+// ==========================================
+function setupStatsCounter() {
+    const statCards = document.querySelectorAll('.stat-number');
+    let animated = false;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !animated) {
+                animated = true;
+                statCards.forEach(stat => {
+                    const target = parseInt(stat.dataset.target, 10);
+                    const hasPlus = stat.textContent.includes('+');
+                    let current = 0;
+                    const duration = 1200;
+                    const stepTime = Math.max(Math.floor(duration / target), 25);
+
+                    const timer = setInterval(() => {
+                        current++;
+                        stat.textContent = current + (hasPlus ? '+' : '');
+                        if (current >= target) {
+                            clearInterval(timer);
+                            stat.textContent = target + (hasPlus ? '+' : '');
+                        }
+                    }, stepTime);
                 });
+            }
+        });
+    }, { threshold: 0.5 });
+
+    const statsWrapper = document.querySelector('.hero-stats');
+    if (statsWrapper) {
+        observer.observe(statsWrapper);
+    }
+}
+
+// ==========================================
+// INTERACTIVE AMBIENT BACKGROUND CANVAS
+// ==========================================
+function setupBackgroundCanvas() {
+    const canvas = document.getElementById('bg-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+
+    let particles = [];
+    const particleCount = Math.min(Math.floor(window.innerWidth / 26), 55);
+
+    let mouse = { x: null, y: null, radius: 120 };
+
+    window.addEventListener('mousemove', (e) => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+    }, { passive: true });
+
+    window.addEventListener('mouseleave', () => {
+        mouse.x = null;
+        mouse.y = null;
+    });
+
+    window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+    }, { passive: true });
+
+    class Particle {
+        constructor() {
+            this.x = Math.random() * width;
+            this.y = Math.random() * height;
+            this.size = Math.random() * 2 + 1;
+            this.baseX = this.x;
+            this.baseY = this.y;
+            this.vx = (Math.random() - 0.5) * 0.7;
+            this.vy = (Math.random() - 0.5) * 0.7;
+            this.opacity = Math.random() * 0.5 + 0.2;
+        }
+
+        draw(color) {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fillStyle = color;
+            ctx.fill();
+        }
+
+        update() {
+            this.x += this.vx;
+            this.y += this.vy;
+
+            if (this.x < 0 || this.x > width) this.vx = -this.vx;
+            if (this.y < 0 || this.y > height) this.vy = -this.vy;
+
+            if (mouse.x != null && mouse.y != null) {
+                const dx = mouse.x - this.x;
+                const dy = mouse.y - this.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                if (distance < mouse.radius) {
+                    const force = (mouse.radius - distance) / mouse.radius;
+                    const directionX = (dx / distance) * force * 2.5;
+                    const directionY = (dy / distance) * force * 2.5;
+                    this.x -= directionX;
+                    this.y -= directionY;
+                }
+            }
+        }
+    }
+
+    for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, width, height);
+
+        const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+        const particleColor = isDark ? 'rgba(225, 29, 72, 0.45)' : 'rgba(128, 0, 0, 0.35)';
+        const lineColor = isDark ? 'rgba(225, 29, 72, ' : 'rgba(128, 0, 0, ';
+
+        for (let i = 0; i < particles.length; i++) {
+            particles[i].update();
+            particles[i].draw(particleColor);
+
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+
+                if (dist < 110) {
+                    const alpha = (1 - dist / 110) * (isDark ? 0.18 : 0.12);
+                    ctx.beginPath();
+                    ctx.strokeStyle = `${lineColor}${alpha})`;
+                    ctx.lineWidth = 0.8;
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.stroke();
+                }
+            }
+        }
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+}
+
+// ==========================================
+// SCROLL HINT
+// ==========================================
+function setupScrollHint() {
+    const hint = document.getElementById('scroll-hint');
+    if (hint) {
+        hint.addEventListener('click', () => {
+            const aboutSec = document.getElementById('about');
+            if (aboutSec) {
+                aboutSec.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
+}
+
+// ==========================================
+// QUICK ACTIONS & COPY TRIGGERS
+// ==========================================
+function setupQuickActions() {
+    const quickEmailBtn = document.getElementById('quick-copy-email');
+    if (quickEmailBtn) {
+        quickEmailBtn.addEventListener('click', () => {
+            copyToClipboard('earlytadwi7@gmail.com', 'Email Earlyta (earlytadwi7@gmail.com) disalin! 📧');
+        });
+    }
+
+    const copyableCards = document.querySelectorAll('.copyable-card');
+    copyableCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const textToCopy = card.getAttribute('data-copy');
+            if (textToCopy) {
+                copyToClipboard(textToCopy, `Email (${textToCopy}) berhasil disalin! ✨`);
             }
         });
     });
 }
 
-function setupScrollHint() {
-    const scrollHint = document.querySelector('.scroll-hint');
-    if (scrollHint) {
-        scrollHint.addEventListener('click', () => {
-            const aboutSection = document.querySelector('#about');
-            if (aboutSection) {
-                aboutSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    }
-}
-
-// ============ EVENT LISTENERS ============
+// ==========================================
+// INITIALIZATION ON DOM READY
+// ==========================================
 document.addEventListener('DOMContentLoaded', () => {
-    renderProjects('all');
+    setupTheme();
+
+    renderProjects();
     renderDesigns('all');
     renderGames('all');
     renderCertifications();
-    
+
     setupFilters();
-    setupScrollAnimation();
     setupNavbar();
-    setupSmoothScroll();
+    setupScrollIndicators();
     setupScrollHint();
-    
-    window.addEventListener('scroll', updateActiveLink);
-    updateActiveLink();
-    
+    setupTypewriter();
+    setupStatsCounter();
+    setupQuickActions();
+    setupBackgroundCanvas();
+
+    // Fetch live GitHub repo count in background
+    fetchLiveGitHubRepoCount();
+
     const lightbox = document.getElementById('lightbox');
-    const closeBtn = document.querySelector('.close-lightbox');
-    if (closeBtn) {
-        closeBtn.addEventListener('click', closeLightbox);
+    const closeLightboxBtn = document.querySelector('.close-lightbox');
+    const overlay = document.querySelector('.lightbox-overlay');
+
+    if (closeLightboxBtn) {
+        closeLightboxBtn.addEventListener('click', closeLightbox);
     }
-    if (lightbox) {
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) closeLightbox();
-        });
+    if (overlay) {
+        overlay.addEventListener('click', closeLightbox);
     }
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeLightbox();
+        }
+    });
 });
