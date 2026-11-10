@@ -4,14 +4,31 @@
  */
 
 // ==========================================
-// DATA: PROJECTS (17 Projects Total)
+// DATA: PROJECTS (18 Projects Total)
 // ==========================================
 const projects = [
-    // ====== 4 PROYEK TERBARU (8 NOVEMBER 2026) ======
+    // ====== PROYEK TERBARU (LABORROW) ======
+    {
+        title: "LaBorrow",
+        desc: `Laborrow adalah aplikasi web peminjaman alat laboratorium berbasis PHP Native dan MySQL yang dirancang untuk mendigitalkan seluruh alur birokrasi dan tata kelola inventaris secara terpadu. Sistem ini menghubungkan siswa dan administrator secara transparan, di mana siswa dapat mencari alat, memantau rincian unit yang siap pakai maupun yang sedang dalam perbaikan, serta mengajukan pinjaman dengan validasi jadwal yang ketat.
+
+Siklus peminjaman berjalan dinamis melalui tahapan status yang terintegrasi, dimulai dari status Pending saat diajukan, Disetujui saat diverifikasi oleh admin dengan pemotongan stok otomatis, status Dipinjam setelah siswa atau petugas mengonfirmasi serah terima fisik di lab, hingga status Dikembalikan yang secara otomatis memulihkan jumlah stok inventaris.
+
+Di sisi administrator, sistem menyediakan dashboard analitik untuk memantau ringkasan unit baik, unit rusak, dan stok kritis, disertai fitur persetujuan pinjam, pencatatan alasan jika ditolak, serta manajemen aksi cepat untuk mengalihkan unit rusak tanpa mengunci unit yang masih bagus. Seluruh ekosistem ini dilengkapi dengan modul obrolan interaktif real-time berbasis Vanilla JavaScript Fetch API agar siswa dapat berkonsultasi langsung dengan petugas laboratorium, disajikan dalam antarmuka modern bernuansa Maroon dan Soft Pink yang sepenuhnya responsif.`,
+        tech: "PHP Native, MySQL, JavaScript",
+        github: "https://github.com/zegow8/laborrow",
+        demo: null,
+        images: ["assets/114.png", "assets/115.png", "assets/116.png"],
+        filter: "phpnative"
+    },
+
+    // ====== 4 PROYEK 8 NOVEMBER 2026 ======
     {
         title: "BAZAR XII-PPLG 17 September 2026",
         desc: `Bazar XII-PPLG adalah website katalog event interaktif untuk mempermudah pengunjung melihat menu dan memesan produk bazar langsung dari smartphone mereka. Dibangun menggunakan Vanilla HTML, CSS, dan JavaScript murni, website ini menyajikan 10 produk dengan layout responsif (4 kolom di laptop, 2 kolom di HP).
+
 Website ini dilengkapi fitur Direct-to-WhatsApp yang otomatis mengisi pesan berisi nama produk yang dipilih, memangkas alur pemesanan agar lebih cepat. Pengunjung juga dapat melihat detail foto produk lebih besar melalui fitur Kustom Lightbox yang mendukung navigasi swipe.
+
 Untuk pengalaman pengguna, diterapkan desain antarmuka pastel dengan animasi transisi yang halus, serta fitur background music pintar yang menyesuaikan kebijakan autoplay browser.`,
         tech: "HTML, CSS, JavaScript",
         github: "https://github.com/zegow8/bazar17sept2026",
@@ -22,7 +39,9 @@ Untuk pengalaman pengguna, diterapkan desain antarmuka pastel dengan animasi tra
     {
         title: "GoAnywhere",
         desc: `GoAnywhere adalah proyek kolaborasi kelompok (tim beranggotakan 5 orang) yang mengembangkan platform aplikasi web full-stack untuk mendigitalkan sistem penyewaan mobil dan motor di area Jabodetabek. Menggunakan framework Laravel, MySQL, dan Tailwind CSS, aplikasi ini memiliki tigas hak akses utama: User (mencari armada dan booking), Manager (mengelola stok dan memvalidasi pesanan), serta Superadmin (pusat kendali analitik dan data lintas cabang).
+
 Sistem ini menerapkan alur transaksi (workflow) yang terstruktur dan aman. Prosesnya dimulai saat User memilih kendaraan, melakukan pembayaran, dan statusnya berubah menjadi PAID (menunggu). Di tahap ini, Manager wajib memberikan persetujuan (Approval); setelah di-approve, status langsung berubah menjadi ACTIVE dan stok otomatis berkurang. Saat masa sewa habis dan User mengembalikan kendaraan, sistem akan menghitung denda secara otomatis (jika telat). Jika pengembalian berhasil (dan denda lunas), status menjadi COMPLETED dan stok unit otomatis kembali ke sistem.
+
 Melalui proyek kelompok ini, saya tidak hanya mengasah kemampuan teknis dalam membangun logika backend yang kompleks (seperti kalkulasi denda dan manajemen stok) serta desain antarmuka, tetapi juga melatih kemampuan kolaborasi tim yang solid, termasuk pengelolaan version control (Git/GitHub) untuk memastikan seluruh fitur berjalan sinkron tanpa konflik kode.`,
         tech: "Laravel, MySQL, Tailwind CSS",
         github: "https://github.com/lidyaaaa/GoAnywhere",
@@ -32,7 +51,9 @@ Melalui proyek kelompok ini, saya tidak hanya mengasah kemampuan teknis dalam me
     },
     {
         title: "KJP #1 LATIHAN USK",
-        desc: `Aplikasi web full-stack berbasis PHP Native dan MySQL yang dibangun sebagai latihan Uji Sertifikasi Kompetensi. Sistem ini mensimulasikan alur pengumpulan data Kartu Jakarta Pintar dengan menerapkan pembagian hak akses (multi-role): Guru sebagai admin yang bertugas mengelola data kelas, memantau statistik input, dan memvalidasi (ACC) data siswa; serta Murid yang dapat melakukan registrasi mandiri, mengisi formulir KJP secara lengkap, dan mengelola datanya sendiri. Dilengkapi dengan fitur pencarian dinamis, sistem validasi status berlapis, dan antarmuka pengguna bergaya Neo-Brutalism yang dirancang manual tanpa template—menunjukkan pemahaman menyeluruh mulai dari perancangan database relasional, keamanan autentikasi, hingga pembuatan UI/UX yang responsif.`,
+        desc: `Aplikasi web full-stack berbasis PHP Native dan MySQL yang dibangun sebagai latihan Uji Sertifikasi Kompetensi. Sistem ini mensimulasikan alur pengumpulan data Kartu Jakarta Pintar dengan menerapkan pembagian hak akses (multi-role): Guru sebagai admin yang bertugas mengelola data kelas, memantau statistik input, dan memvalidasi (ACC) data siswa; serta Murid yang dapat melakukan registrasi mandiri, mengisi formulir KJP secara lengkap, dan mengelola datanya sendiri.
+
+Dilengkapi dengan fitur pencarian dinamis, sistem validasi status berlapis, dan antarmuka pengguna bergaya Neo-Brutalism yang dirancang manual tanpa template—menunjukkan pemahaman menyeluruh mulai dari perancangan database relasional, keamanan autentikasi, hingga pembuatan UI/UX yang responsif.`,
         tech: "PHP Native, MySQL",
         github: "https://github.com/zegow8/manajemen-KJP.git",
         demo: null,
@@ -42,6 +63,7 @@ Melalui proyek kelompok ini, saya tidak hanya mengasah kemampuan teknis dalam me
     {
         title: "rainpedia",
         desc: `Rainpedia adalah platform e-commerce buku dan sistem perpustakaan digital terintegrasi berbasis Laravel yang dirancang responsif di ponsel pintar serta dilindungi middleware keamanan untuk merespons kode 401 saat pengunjung liar mencoba mengakses halaman tertutup dan kode 403 saat terjadi pelanggaran hak akses antar akun. Pengelolaan aplikasi ini diatur melalui panel sidebar admin yang memuat Dashboard analitik, modul Data Buku dengan validasi pencegahan duplikasi judul, Data Pembelian, Data Peminjaman, Data Pengembalian, Pendapatan Denda, Manajemen Pengguna, dan Layanan Chat, yang diselaraskan dengan kemudahan navbar pengguna untuk menjelajahi Katalog berpaginasi rapi lima belas buku, Keranjang Belanja, Riwayat Transaksi, Riwayat Pinjaman, Pusat Notifikasi empat kategori, serta bantuan Chat langsung.
+
 Alur transaksinya menyediakan pilihan keranjang belanja maupun tombol Beli Sekarang untuk checkout instan tanpa mencampur item lain, dengan transisi status pesanan bertahap dari Waiting Confirmation saat menunggu verifikasi pembayaran oleh admin, Processing saat barang mulai dikemas, Shipped bersama nomor resi pengiriman, hingga ditutup dengan status Completed atau Cancelled. Sementara itu pada sirkulasi perpustakaan, pengajuan pinjam berstatus Pending dapat disetujui menjadi Borrowed atau ditolak sebagai Rejected, dengan deteksi otomatis status Overdue beserta denda harian yang bertransisi dari Unpaid menjadi Paid, lalu diakhiri permohonan pemulangan buku yang wajib diverifikasi dan di-ACC oleh admin menuju status final Returned, didukung fitur percakapan bertemplate instan dengan status pesan Belum Dibalas dan Sudah Dibalas agar interaksi layanan pelanggan tetap transparan dan responsif.`,
         tech: "Laravel, MySQL",
         github: "https://github.com/zegow8/rainpedia.git",
@@ -219,9 +241,16 @@ Selain itu, seluruh transaksi yang telah dilakukan akan tersimpan pada halaman r
 ];
 
 // ==========================================
-// DATA: DESIGN GALLERY (9 Best Design)
+// DATA: DESIGN GALLERY (10 Best Design)
 // ==========================================
 const designs = [
+    {
+        title: "LaBorrow",
+        desc: "UI Web Peminjaman Alat Laboratorium Sekolah",
+        imgFile: "assets/117.png",
+        figmaUrl: "https://www.figma.com/design/i86HxhzROZPhvPyngTSOGd/LaBorrow?node-id=0-1&p=f&t=6h2X4K84kI3OrXBy-0",
+        filter: "desktop"
+    },
     {
         title: "GoAnywhere",
         desc: "UI Web Rental Mobil & Motor Jabodetabek (Proyek Tim)",
@@ -416,34 +445,84 @@ let currentProjectFilter = 'all';
 let currentSearchQuery = '';
 
 // ==========================================
-// DYNAMIC GITHUB REPO FETCHER
+// DYNAMIC GITHUB REPO FETCHER & SYNC
 // ==========================================
-async function fetchLiveGitHubRepoCount() {
+let statsCounterAnimated = false;
+
+function applyCachedRepoCount() {
     try {
-        const response = await fetch('https://api.github.com/users/zegow8');
-        if (response.ok) {
-            const data = await response.json();
-            if (data && typeof data.public_repos === 'number') {
-                const count = data.public_repos;
-                
-                // Update hero stats counter
+        const cached = localStorage.getItem('cached_github_repos');
+        if (cached) {
+            const count = parseInt(cached, 10);
+            if (!isNaN(count) && count > 0) {
                 const statEl = document.getElementById('github-repo-count');
                 if (statEl) {
                     statEl.dataset.target = count;
                     statEl.textContent = count;
                 }
+            }
+        }
+    } catch (e) {
+        // LocalStorage might be disabled in private mode
+    }
+}
 
-                // Update contact card badge
-                const pillEl = document.getElementById('contact-repo-pill');
-                if (pillEl) {
-                    const numEl = pillEl.querySelector('.repo-num');
-                    if (numEl) numEl.textContent = count;
-                    else pillEl.innerHTML = `<i class="fas fa-code-branch"></i> ${count} Repos`;
+function animateNumber(el, start, end) {
+    if (start === end) return;
+    const diff = end - start;
+    const step = diff > 0 ? 1 : -1;
+    let curr = start;
+    const duration = 600;
+    const stepTime = Math.max(30, Math.floor(duration / Math.abs(diff)));
+    const timer = setInterval(() => {
+        curr += step;
+        el.textContent = curr;
+        if (curr === end) {
+            clearInterval(timer);
+            el.textContent = end;
+        }
+    }, stepTime);
+}
+
+async function fetchLiveGitHubRepoCount() {
+    // 1. Instantly apply cached repo count if available
+    applyCachedRepoCount();
+
+    // 2. Fetch fresh live data from GitHub API with cache-busting timestamp
+    try {
+        const response = await fetch(`https://api.github.com/users/zegow8?t=${Date.now()}`);
+        if (response.ok) {
+            const data = await response.json();
+            if (data && typeof data.public_repos === 'number') {
+                const freshCount = data.public_repos;
+                
+                try {
+                    localStorage.setItem('cached_github_repos', freshCount.toString());
+                } catch (e) {}
+
+                // Update hero stats counter
+                const statEl = document.getElementById('github-repo-count');
+                if (statEl) {
+                    const currentDisplayed = parseInt(statEl.textContent, 10);
+                    statEl.dataset.target = freshCount;
+
+                    if (statsCounterAnimated) {
+                        // If stats counter already finished counting up, animate smoothly to fresh count
+                        if (!isNaN(currentDisplayed) && currentDisplayed !== freshCount) {
+                            animateNumber(statEl, currentDisplayed, freshCount);
+                        } else {
+                            statEl.textContent = freshCount;
+                        }
+                    } else {
+                        // If stats counter hasn't animated yet, set initial text & target so it counts up to freshCount
+                        statEl.dataset.target = freshCount;
+                        statEl.textContent = freshCount;
+                    }
                 }
             }
         }
     } catch (e) {
-        // Fallback gracefully to default
+        // Fallback gracefully without breaking UI
     }
 }
 
@@ -1309,18 +1388,17 @@ function setupNavbar() {
 // ==========================================
 function setupStatsCounter() {
     const statCards = document.querySelectorAll('.stat-number');
-    let animated = false;
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting && !animated) {
-                animated = true;
+            if (entry.isIntersecting && !statsCounterAnimated) {
+                statsCounterAnimated = true;
                 statCards.forEach(stat => {
-                    const target = parseInt(stat.dataset.target, 10);
+                    const target = parseInt(stat.dataset.target, 10) || 0;
                     const hasPlus = stat.textContent.includes('+');
                     let current = 0;
                     const duration = 1200;
-                    const stepTime = Math.max(Math.floor(duration / target), 25);
+                    const stepTime = Math.max(Math.floor(duration / (target || 1)), 25);
 
                     const timer = setInterval(() => {
                         current++;
@@ -1491,6 +1569,9 @@ function setupQuickActions() {
 // INITIALIZATION ON DOM READY
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
+    // 1. Fetch live GitHub repo count & apply cached counter immediately
+    fetchLiveGitHubRepoCount();
+
     setupTheme();
 
     renderProjects();
@@ -1506,9 +1587,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setupStatsCounter();
     setupQuickActions();
     setupBackgroundCanvas();
-
-    // Fetch live GitHub repo count in background
-    fetchLiveGitHubRepoCount();
 
     const lightbox = document.getElementById('lightbox');
     const closeLightboxBtn = document.querySelector('.close-lightbox');
