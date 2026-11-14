@@ -7,35 +7,7 @@
 // DATA: PROJECTS (18 Projects Total)
 // ==========================================
 const projects = [
-    // ====== PROYEK TERBARU (LABORROW) ======
-    {
-        title: "LaBorrow",
-        desc: `Laborrow adalah aplikasi web peminjaman alat laboratorium berbasis PHP Native dan MySQL yang dirancang untuk mendigitalkan seluruh alur birokrasi dan tata kelola inventaris secara terpadu. Sistem ini menghubungkan siswa dan administrator secara transparan, di mana siswa dapat mencari alat, memantau rincian unit yang siap pakai maupun yang sedang dalam perbaikan, serta mengajukan pinjaman dengan validasi jadwal yang ketat.
-
-Siklus peminjaman berjalan dinamis melalui tahapan status yang terintegrasi, dimulai dari status Pending saat diajukan, Disetujui saat diverifikasi oleh admin dengan pemotongan stok otomatis, status Dipinjam setelah siswa atau petugas mengonfirmasi serah terima fisik di lab, hingga status Dikembalikan yang secara otomatis memulihkan jumlah stok inventaris.
-
-Di sisi administrator, sistem menyediakan dashboard analitik untuk memantau ringkasan unit baik, unit rusak, dan stok kritis, disertai fitur persetujuan pinjam, pencatatan alasan jika ditolak, serta manajemen aksi cepat untuk mengalihkan unit rusak tanpa mengunci unit yang masih bagus. Seluruh ekosistem ini dilengkapi dengan modul obrolan interaktif real-time berbasis Vanilla JavaScript Fetch API agar siswa dapat berkonsultasi langsung dengan petugas laboratorium, disajikan dalam antarmuka modern bernuansa Maroon dan Soft Pink yang sepenuhnya responsif.`,
-        tech: "PHP Native, MySQL, JavaScript",
-        github: "https://github.com/zegow8/laborrow",
-        demo: null,
-        images: ["assets/114.png", "assets/115.png", "assets/116.png"],
-        filter: "phpnative"
-    },
-
-    // ====== 4 PROYEK 8 NOVEMBER 2026 ======
-    {
-        title: "BAZAR XII-PPLG 17 September 2026",
-        desc: `Bazar XII-PPLG adalah website katalog event interaktif untuk mempermudah pengunjung melihat menu dan memesan produk bazar langsung dari smartphone mereka. Dibangun menggunakan Vanilla HTML, CSS, dan JavaScript murni, website ini menyajikan 10 produk dengan layout responsif (4 kolom di laptop, 2 kolom di HP).
-
-Website ini dilengkapi fitur Direct-to-WhatsApp yang otomatis mengisi pesan berisi nama produk yang dipilih, memangkas alur pemesanan agar lebih cepat. Pengunjung juga dapat melihat detail foto produk lebih besar melalui fitur Kustom Lightbox yang mendukung navigasi swipe.
-
-Untuk pengalaman pengguna, diterapkan desain antarmuka pastel dengan animasi transisi yang halus, serta fitur background music pintar yang menyesuaikan kebijakan autoplay browser.`,
-        tech: "HTML, CSS, JavaScript",
-        github: "https://github.com/zegow8/bazar17sept2026",
-        demo: "https://zegow8.github.io/bazar17sept2026/",
-        images: ["assets/101.png"],
-        filter: "htmlcssjs"
-    },
+    // ====== TOP 5 PINNED (FEATURED) PROJECTS ======
     {
         title: "GoAnywhere",
         desc: `GoAnywhere adalah proyek kolaborasi kelompok (tim beranggotakan 5 orang) yang mengembangkan platform aplikasi web full-stack untuk mendigitalkan sistem penyewaan mobil dan motor di area Jabodetabek. Menggunakan framework Laravel, MySQL, dan Tailwind CSS, aplikasi ini memiliki tigas hak akses utama: User (mencari armada dan booking), Manager (mengelola stok dan memvalidasi pesanan), serta Superadmin (pusat kendali analitik dan data lintas cabang).
@@ -47,32 +19,23 @@ Melalui proyek kelompok ini, saya tidak hanya mengasah kemampuan teknis dalam me
         github: "https://github.com/lidyaaaa/GoAnywhere",
         demo: null,
         images: ["assets/103.png", "assets/104.png", "assets/105.png", "assets/106.png"],
-        filter: "laravel"
+        filter: "laravel",
+        pinned: true
     },
     {
-        title: "KJP #1 LATIHAN USK",
-        desc: `Aplikasi web full-stack berbasis PHP Native dan MySQL yang dibangun sebagai latihan Uji Sertifikasi Kompetensi. Sistem ini mensimulasikan alur pengumpulan data Kartu Jakarta Pintar dengan menerapkan pembagian hak akses (multi-role): Guru sebagai admin yang bertugas mengelola data kelas, memantau statistik input, dan memvalidasi (ACC) data siswa; serta Murid yang dapat melakukan registrasi mandiri, mengisi formulir KJP secara lengkap, dan mengelola datanya sendiri.
+        title: "Rainpedia",
+        desc: `Rainpedia adalah platform web hybrid modern yang mengintegrasikan layanan toko buku fisik online (e-commerce) dengan sistem sirkulasi perpustakaan digital berbasis Laravel, MySQL, dan JavaScript. Dibangun untuk memberikan kemudahan akses literasi, aplikasi ini memungkinkan pengguna tidak hanya membeli buku untuk dimiliki, tetapi juga meminjam buku fisik berkualitas secara gratis melalui sistem tata kelola sirkulasi yang terstruktur dan terotomasi.
 
-Dilengkapi dengan fitur pencarian dinamis, sistem validasi status berlapis, dan antarmuka pengguna bergaya Neo-Brutalism yang dirancang manual tanpa template—menunjukkan pemahaman menyeluruh mulai dari perancangan database relasional, keamanan autentikasi, hingga pembuatan UI/UX yang responsif.`,
-        tech: "PHP Native, MySQL",
-        github: "https://github.com/zegow8/manajemen-KJP.git",
-        demo: null,
-        images: ["assets/107.png", "assets/108.png", "assets/109.png"],
-        filter: "phpnative"
-    },
-    {
-        title: "rainpedia",
-        desc: `Rainpedia adalah platform e-commerce buku dan sistem perpustakaan digital terintegrasi berbasis Laravel yang dirancang responsif di ponsel pintar serta dilindungi middleware keamanan untuk merespons kode 401 saat pengunjung liar mencoba mengakses halaman tertutup dan kode 403 saat terjadi pelanggaran hak akses antar akun. Pengelolaan aplikasi ini diatur melalui panel sidebar admin yang memuat Dashboard analitik, modul Data Buku dengan validasi pencegahan duplikasi judul, Data Pembelian, Data Peminjaman, Data Pengembalian, Pendapatan Denda, Manajemen Pengguna, dan Layanan Chat, yang diselaraskan dengan kemudahan navbar pengguna untuk menjelajahi Katalog berpaginasi rapi lima belas buku, Keranjang Belanja, Riwayat Transaksi, Riwayat Pinjaman, Pusat Notifikasi empat kategori, serta bantuan Chat langsung.
+Dari sudut pandang Pengguna (User), platform ini menyediakan katalog buku interaktif dengan fitur pencarian dan filter genre secara instan. Untuk pembelian buku, pengguna dapat mengelola keranjang belanja, memilih kurir pengiriman saat checkout, mengunggah bukti pembayaran, dan memantau status pesanan bertahap. Sedangkan pada layanan perpustakaan, pengguna dapat mengajukan peminjaman buku gratis dengan batas kuota maksimal 2 buku aktif selama 1–7 hari. Pengguna dibekali dashboard personal untuk memantau sisa hari pinjaman, riwayat buku yang selesai dikembalikan, pelunasan denda keterlambatan harian secara mandiri, serta fitur live chat bantuan ke admin yang dilengkapi proteksi anti-spam (kuota maksimal 3 pesan beruntun).
 
-Alur transaksinya menyediakan pilihan keranjang belanja maupun tombol Beli Sekarang untuk checkout instan tanpa mencampur item lain, dengan transisi status pesanan bertahap dari Waiting Confirmation saat menunggu verifikasi pembayaran oleh admin, Processing saat barang mulai dikemas, Shipped bersama nomor resi pengiriman, hingga ditutup dengan status Completed atau Cancelled. Sementara itu pada sirkulasi perpustakaan, pengajuan pinjam berstatus Pending dapat disetujui menjadi Borrowed atau ditolak sebagai Rejected, dengan deteksi otomatis status Overdue beserta denda harian yang bertransisi dari Unpaid menjadi Paid, lalu diakhiri permohonan pemulangan buku yang wajib diverifikasi dan di-ACC oleh admin menuju status final Returned, didukung fitur percakapan bertemplate instan dengan status pesan Belum Dibalas dan Sudah Dibalas agar interaksi layanan pelanggan tetap transparan dan responsif.`,
-        tech: "Laravel, MySQL",
+Dari sisi Administrator (Admin), Rainpedia menyediakan panel kontrol operasional untuk memantau ringkasan transaksi, peringatan buku stok menipis, dan arus peminjaman secara real-time. Admin mengelola inventaris dengan sistem dual-stock (memisahkan stok penjualan dan stok peminjaman), memproses verifikasi pesanan baru, serta menyetujui pengembalian buku (return request) yang terkunci oleh validasi bebas denda. Admin juga memiliki akses manajemen pengguna (termasuk blokir akun), tombol direct chat ke anggota, cetak laporan transaksi dan sirkulasi formal, serta prototipe statis di folder docs yang siap di-deploy ke GitHub Pages dengan tampilan yang 100% responsif di smartphone.`,
+        tech: "Laravel, MySQL, JavaScript",
         github: "https://github.com/zegow8/rainpedia.git",
-        demo: null,
+        demo: "https://zegow8.github.io/rainpedia/",
         images: ["assets/110.png", "assets/111.png", "assets/112.png"],
-        filter: "laravel"
+        filter: "laravel",
+        pinned: true
     },
-
-    // ====== PROYEK SEBELUMNYA ======
     {
         title: "Recyclefy",
         desc: `Recyclefy adalah platform pengelolaan sampah berbasis komunitas dengan sistem multi-user yang terdiri dari user, admin wilayah, dan super admin. Aplikasi dilengkapi dengan fitur autentikasi login dan registrasi berdasarkan role serta sistem tukar sampah jadi poin. User dapat menyetorkan sampah ke 3 wilayah (Kemayoran, Sumur Batu, Cempaka Putih) dan mendapatkan poin yang bisa ditukar dengan produk daur ulang.
@@ -86,7 +49,8 @@ Pada sisi user, tersedia dashboard aktivitas yang menampilkan total poin, poin t
         github: "https://github.com/zegow8/recyclefy",
         demo: null,
         images: ["assets/rec1.png", "assets/rec2.png", "assets/rec3.png"],
-        filter: "nextjs"
+        filter: "nextjs",
+        pinned: true
     },
     {
         title: "Budgetify",
@@ -99,20 +63,8 @@ Dari sisi teknis, aplikasi ini menggunakan PDO untuk koneksi database yang aman,
         github: "https://github.com/zegow8/budgetify",
         demo: "http://budgetify.free.nf/index.php",
         images: ["assets/bud1.png", "assets/bud2.png", "assets/bud3.png", "assets/bud4.png"],
-        filter: "phpnative"
-    },
-    {
-        title: "Portofolio Pancasila Lyta",
-        desc: `Portofolio ini merupakan aplikasi web berbasis PHP Native dan MySQL yang dirancang untuk mendokumentasikan penerapan nilai-nilai Pancasila dalam kegiatan sehari-hari. Aplikasi dikembangkan dengan sistem multi-user yang terdiri dari dua peran, yaitu admin dan user, dengan fitur autentikasi login berbasis role untuk memastikan keamanan akses data.
-
-Pada sisi admin, tersedia dashboard yang menampilkan informasi statistik seperti total kegiatan, total refleksi, dan total penilaian yang telah dibuat. Admin dapat mengelola seluruh data kegiatan harian melalui fitur CRUD (Create, Read, Update, Delete), mengunggah dokumentasi berupa gambar, memberikan penilaian mingguan beserta alasan, serta menulis refleksi bulanan. Sistem juga dilengkapi dengan fitur pencarian data berdasarkan bulan dan tahun, serta tampilan kalender interaktif yang menunjukkan aktivitas per tanggal beserta keterangan minggu ke-berapa.
-
-Pada sisi pengguna (user), tersedia tampilan portofolio yang menampilkan data diri, foto profil, logo dan sila Pancasila, serta laporan kegiatan bulanan dalam bentuk tabel mingguan. Pengguna dapat melihat seluruh data kegiatan, dokumentasi, penilaian, dan refleksi yang telah diinput oleh admin tanpa dapat mengubah atau menghapus data. Sistem juga menampilkan kalender yang menunjukkan tanggal-tanggal yang telah terisi data, sehingga memudahkan pengguna dalam melihat pola aktivitas selama satu bulan penuh.`,
-        tech: "PHP Native, MySQL, CSS Native",
-        github: "https://github.com/zegow8/Portofolio-Pancasila-Lyta",
-        demo: "http://porto-pancasila-lyta.free.nf/?i=1",
-        images: ["assets/portopsila1.png", "assets/portopsila2.png", "assets/portopsila3.png"],
-        filter: "phpnative"
+        filter: "phpnative",
+        pinned: true
     },
     {
         title: "Raiental",
@@ -127,7 +79,60 @@ Pengguna juga dapat melihat riwayat penyewaan, memantau status pesanan, mengakse
         github: "https://github.com/zegow8/Raiental.git",
         demo: null,
         images: ["assets/raiental1.png", "assets/raiental2.png"],
-        filter: "nextjs"
+        filter: "nextjs",
+        pinned: true
+    },
+
+    // ====== PROYEK LAINNYA ======
+    {
+        title: "LaBorrow",
+        desc: `Laborrow adalah aplikasi web peminjaman alat laboratorium berbasis PHP Native dan MySQL yang dirancang untuk mendigitalkan seluruh alur birokrasi dan tata kelola inventaris secara terpadu. Sistem ini menghubungkan siswa dan administrator secara transparan, di mana siswa dapat mencari alat, memantau rincian unit yang siap pakai maupun yang sedang dalam perbaikan, serta mengajukan pinjaman dengan validasi jadwal yang ketat.
+
+Siklus peminjaman berjalan dinamis melalui tahapan status yang terintegrasi, dimulai dari status Pending saat diajukan, Disetujui saat diverifikasi oleh admin dengan pemotongan stok otomatis, status Dipinjam setelah siswa atau petugas mengonfirmasi serah terima fisik di lab, hingga status Dikembalikan yang secara otomatis memulihkan jumlah stok inventaris.
+
+Di sisi administrator, sistem menyediakan dashboard analitik untuk memantau ringkasan unit baik, unit rusak, dan stok kritis, disertai fitur persetujuan pinjam, pencatatan alasan jika ditolak, serta manajemen aksi cepat untuk mengalihkan unit rusak tanpa mengunci unit yang masih bagus. Seluruh ekosistem ini dilengkapi dengan modul obrolan interaktif real-time berbasis Vanilla JavaScript Fetch API agar siswa dapat berkonsultasi langsung dengan petugas laboratorium, disajikan dalam antarmuka modern bernuansa Maroon dan Soft Pink yang sepenuhnya responsif.`,
+        tech: "PHP Native, MySQL, JavaScript",
+        github: "https://github.com/zegow8/laborrow",
+        demo: null,
+        images: ["assets/114.png", "assets/115.png", "assets/116.png"],
+        filter: "phpnative"
+    },
+    {
+        title: "BAZAR XII-PPLG 17 September 2026",
+        desc: `Bazar XII-PPLG adalah website katalog event interaktif untuk mempermudah pengunjung melihat menu dan memesan produk bazar langsung dari smartphone mereka. Dibangun menggunakan Vanilla HTML, CSS, dan JavaScript murni, website ini menyajikan 10 produk dengan layout responsif (4 kolom di laptop, 2 kolom di HP).
+
+Website ini dilengkapi fitur Direct-to-WhatsApp yang otomatis mengisi pesan berisi nama produk yang dipilih, memangkas alur pemesanan agar lebih cepat. Pengunjung juga dapat melihat detail foto produk lebih besar melalui fitur Kustom Lightbox yang mendukung navigasi swipe.
+
+Untuk pengalaman pengguna, diterapkan desain antarmuka pastel dengan animasi transisi yang halus, serta fitur background music pintar yang menyesuaikan kebijakan autoplay browser.`,
+        tech: "HTML, CSS, JavaScript",
+        github: "https://github.com/zegow8/bazar17sept2026",
+        demo: "https://zegow8.github.io/bazar17sept2026/",
+        images: ["assets/101.png"],
+        filter: "htmlcssjs"
+    },
+    {
+        title: "KJP #1 LATIHAN USK",
+        desc: `Aplikasi web full-stack berbasis PHP Native dan MySQL yang dibangun sebagai latihan Uji Sertifikasi Kompetensi. Sistem ini mensimulasikan alur pengumpulan data Kartu Jakarta Pintar dengan menerapkan pembagian hak akses (multi-role): Guru sebagai admin yang bertugas mengelola data kelas, memantau statistik input, dan memvalidasi (ACC) data siswa; serta Murid yang dapat melakukan registrasi mandiri, mengisi formulir KJP secara lengkap, dan mengelola datanya sendiri.
+
+Dilengkapi dengan fitur pencarian dinamis, sistem validasi status berlapis, dan antarmuka pengguna bergaya Neo-Brutalism yang dirancang manual tanpa template—menunjukkan pemahaman menyeluruh mulai dari perancangan database relasional, keamanan autentikasi, hingga pembuatan UI/UX yang responsif.`,
+        tech: "PHP Native, MySQL",
+        github: "https://github.com/zegow8/manajemen-KJP.git",
+        demo: null,
+        images: ["assets/107.png", "assets/108.png", "assets/109.png"],
+        filter: "phpnative"
+    },
+    {
+        title: "Portofolio Pancasila Lyta",
+        desc: `Portofolio ini merupakan aplikasi web berbasis PHP Native dan MySQL yang dirancang untuk mendokumentasikan penerapan nilai-nilai Pancasila dalam kegiatan sehari-hari. Aplikasi dikembangkan dengan sistem multi-user yang terdiri dari dua peran, yaitu admin dan user, dengan fitur autentikasi login berbasis role untuk memastikan keamanan akses data.
+
+Pada sisi admin, tersedia dashboard yang menampilkan informasi statistik seperti total kegiatan, total refleksi, dan total penilaian yang telah dibuat. Admin dapat mengelola seluruh data kegiatan harian melalui fitur CRUD (Create, Read, Update, Delete), mengunggah dokumentasi berupa gambar, memberikan penilaian mingguan beserta alasan, serta menulis refleksi bulanan. Sistem juga dilengkapi dengan fitur pencarian data berdasarkan bulan dan tahun, serta tampilan kalender interaktif yang menunjukkan aktivitas per tanggal beserta keterangan minggu ke-berapa.
+
+Pada sisi pengguna (user), tersedia tampilan portofolio yang menampilkan data diri, foto profil, logo dan sila Pancasila, serta laporan kegiatan bulanan dalam bentuk tabel mingguan. Pengguna dapat melihat seluruh data kegiatan, dokumentasi, penilaian, dan refleksi yang telah diinput oleh admin tanpa dapat mengubah atau menghapus data. Sistem juga menampilkan kalender yang menunjukkan tanggal-tanggal yang telah terisi data, sehingga memudahkan pengguna dalam melihat pola aktivitas selama satu bulan penuh.`,
+        tech: "PHP Native, MySQL, CSS Native",
+        github: "https://github.com/zegow8/Portofolio-Pancasila-Lyta",
+        demo: "http://porto-pancasila-lyta.free.nf/?i=1",
+        images: ["assets/portopsila1.png", "assets/portopsila2.png", "assets/portopsila3.png"],
+        filter: "phpnative"
     },
     {
         title: "Olshop Prog Lyta",
@@ -572,6 +577,13 @@ function renderProjects() {
         return matchesCategory && matchesQuery;
     });
 
+    // Pinned projects stay gracefully on top while preserving defined order
+    filtered.sort((a, b) => {
+        if (a.pinned && !b.pinned) return -1;
+        if (!a.pinned && b.pinned) return 1;
+        return 0;
+    });
+
     if (countLabel) {
         countLabel.textContent = filtered.length;
     }
@@ -645,9 +657,12 @@ function renderProjects() {
             : '';
 
         return `
-            <article class="project-card modern-card" data-index="${index}">
+            <article class="project-card modern-card ${project.pinned ? 'card-pinned' : ''}" data-index="${index}">
                 <div class="card-header-bar">
-                    <span class="card-category-badge">${project.filter.toUpperCase()}</span>
+                    <div class="card-badge-group">
+                        <span class="card-category-badge">${project.filter.toUpperCase()}</span>
+                        ${project.pinned ? `<span class="card-pinned-badge"><i class="fas fa-thumbtack"></i> Pinned</span>` : ''}
+                    </div>
                     <h3 class="project-title">${project.title}</h3>
                 </div>
 

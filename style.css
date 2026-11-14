@@ -1173,6 +1173,13 @@ body {
     margin-bottom: 16px;
 }
 
+.card-badge-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
 .card-category-badge {
     align-self: flex-start;
     font-size: 0.72rem;
@@ -1183,6 +1190,50 @@ body {
     background: var(--primary-subtle);
     color: var(--primary-hover);
     border: 1px solid var(--border-color);
+}
+
+.card-pinned-badge {
+    align-self: flex-start;
+    font-size: 0.70rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    padding: 3px 9px;
+    border-radius: var(--radius-full);
+    background: rgba(225, 29, 72, 0.12);
+    color: var(--primary-hover);
+    border: 1px solid rgba(225, 29, 72, 0.28);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow: 0 2px 8px rgba(225, 29, 72, 0.12);
+    transition: var(--transition-fast);
+}
+
+.card-pinned-badge i {
+    font-size: 0.65rem;
+    transform: rotate(30deg);
+}
+
+.modern-card.card-pinned {
+    border-color: rgba(225, 29, 72, 0.28);
+    position: relative;
+}
+
+.modern-card.card-pinned::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--primary-hover), transparent);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    opacity: 0.85;
+}
+
+.modern-card.card-pinned:hover {
+    border-color: var(--primary-hover);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45), 0 0 18px rgba(225, 29, 72, 0.22);
 }
 
 .project-title, .game-title, .design-title {
